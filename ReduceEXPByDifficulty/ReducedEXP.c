@@ -13,7 +13,7 @@ int GetBattleUnitExpGain(struct BattleUnit* actor, struct BattleUnit* target) {
     result += GetUnitKillExpBonus(&actor->unit, &target->unit);
 	
 	if (gChapterData.chapterStateBits & (1<<6)) { 
-		result = result * 15 / 100; // Percentage to divide exp by
+		result = result * 85 / 100; // Percentage to divide exp by
 	} 
 
     if (result > 100)
