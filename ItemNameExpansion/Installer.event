@@ -26,4 +26,4 @@ ORG 0x59D160
 BYTE 0x0 0x0 MenuTileWidth
 POP
 
-#include "MoveShopOver.lyn.event"
+#include "ItemNameExpansion.lyn.event"
