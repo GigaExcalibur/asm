@@ -1,0 +1,13 @@
+#define CharacterAgeTableEntry(charID, age) "PUSH; ORG CharacterAgeTable+charID; BYTE age; POP"
+
+CharacterAgeTable:
+FILL 0xFF
+
+// Use the CharacterAgeTableEntry macro to define set an age for each char id
+// Vanilla ages not canon
+/*
+CharacterAgeTableEntry(Eirika, 17)
+CharacterAgeTableEntry(Seth, 26)
+CharacterAgeTableEntry(Gilliam, 45)
+CharacterAgeTableEntry(Franz, 15)
+*/
