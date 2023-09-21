@@ -1,0 +1,7 @@
+// User end: copy-paste "POIN IgnoreTriangleRoutine" inside EngineHacks/Necessary/CalcLoops/WTACalcLoop/WTACalcLoop.event
+
+// Copy this into table defs: #define IgnoreTriangle 0x02000000
+
+ALIGN 4
+IgnoreTriangleRoutine:
+#incbin "IgnoreTriangle.dmp"
