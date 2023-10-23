@@ -1,0 +1,19 @@
+#define ItemForgeTableEntry(item, index) "PUSH; ORG ItemForgeTableEntries+item; BYTE index; POP"
+#define ForgeEffectTableEntry(mt, hit, weight, crit, cost, range) "BYTE mt hit weight crit; SHORT cost; BYTE range 0"
+
+ALIGN 4
+ItemForgeTableEntries:
+FILL 0xFF
+
+// use ItemForgeTableEntry() to give each weapon in the table a dedicated forging table index
+ItemForgeTableEntry(Fireball, 0x0)
+
+// and then use ForgeEffectTableEntry() to determine how much each weapon improves per forge level
+// mt, hit, weight, crit, and wexp need to be multiplied by 2 in this table, range needs to be multiplied by 6.
+ALIGN 4
+ForgeEffectTable:
+ForgeEffectTableEntry(2, 10, (-1), 5, 500, 6)
+
+#include "StatusScreenInline.event"
+
+#include "Forging.lyn.event"
