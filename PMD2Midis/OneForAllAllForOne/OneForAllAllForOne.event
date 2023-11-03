@@ -1,0 +1,3378 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    OneForAllAllForOne_grp  voicegroup000
+        #define    OneForAllAllForOne_pri  0
+        #define    OneForAllAllForOne_rev  0
+        #define    OneForAllAllForOne_key  0
+
+        // .rodata
+        // OneForAllAllForOne
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+OneForAllAllForOne_0:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   120/2
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE   TEMPO   132/2
+        BYTE           VOICE   73
+        BYTE           VOL     64
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W24
+        BYTE           N06     Gs2   v100
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE                   Gs2   v063
+        BYTE   W08
+        BYTE                   An2   v100
+        BYTE   W08
+        BYTE                   Bn2   v063
+        BYTE   W08
+        BYTE                   Dn3   v100
+        BYTE   W08
+        BYTE                   Bn2   v063
+        BYTE   W08
+// 006   ----------------------------------------
+        BYTE                   Dn3   v100
+        BYTE   W08
+        BYTE                   Bn2   v063
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE           N06     Gs2   v100
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An2
+        BYTE   W08
+        BYTE                   Gs2   v063
+        BYTE   W08
+        BYTE                   An2   v100
+        BYTE   W08
+        BYTE           N04     Gs2
+        BYTE   W24
+// 007   ----------------------------------------
+        BYTE   W24
+        BYTE           N06
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE                   Gs2   v063
+        BYTE   W08
+        BYTE                   An2   v100
+        BYTE   W08
+        BYTE           N06     Bn2
+        BYTE   W08
+        BYTE           N05     En3
+        BYTE   W08
+        BYTE                   Dn3   v063
+        BYTE   W08
+// 008   ----------------------------------------
+        BYTE                   En3   v100
+        BYTE   W08
+        BYTE           N06     Bn2
+        BYTE   W08
+        BYTE           N05     An2   v063
+        BYTE   W08
+        BYTE           N06     Gs2   v100
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An2
+        BYTE   W08
+        BYTE                   Gs2   v063
+        BYTE   W08
+        BYTE                   An2   v100
+        BYTE   W08
+        BYTE           N04     Gs2
+        BYTE   W24
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE   W02
+        BYTE           VOL     69
+        BYTE   W68
+        BYTE   W02
+// 013   ----------------------------------------
+OneForAllAllForOne_0_13:
+        BYTE   W24
+        BYTE           N08     Bn3   v125
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W24
+        BYTE                   Fs4
+        BYTE   W24
+        BYTE   PEND
+// 014   ----------------------------------------
+OneForAllAllForOne_0_14:
+        BYTE           N08     An4   v125
+        BYTE   W24
+        BYTE           N03     Gs4   v110
+        BYTE   W04
+        BYTE                   An4   v106
+        BYTE   W04
+        BYTE                   Gs4
+        BYTE   W04
+        BYTE                   An4   v108
+        BYTE   W04
+        BYTE                   Gs4
+        BYTE   W04
+        BYTE                   An4   v110
+        BYTE   W04
+        BYTE           N14     Fs4   v122
+        BYTE   W16
+        BYTE           N05     En4
+        BYTE   W08
+        BYTE           N06     Bn4   v127
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_0_15:
+        BYTE           N06     Bn4   v120
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4
+        BYTE   W08
+        BYTE           N03     An4   v091
+        BYTE   W04
+        BYTE                   Bn4   v094
+        BYTE   W04
+        BYTE                   An4   v097
+        BYTE   W04
+        BYTE                   Bn4   v101
+        BYTE   W04
+        BYTE           N19     An4   v119
+        BYTE   W24
+        BYTE           N04     Fs4   v125
+        BYTE   W10
+        BYTE           N03     Cs5   v078
+        BYTE   W04
+        BYTE                   Ds5   v085
+        BYTE   W04
+        BYTE                   Cs5   v088
+        BYTE   W04
+        BYTE                   Ds5   v081
+        BYTE   W04
+        BYTE           N10     Cs5   v111
+        BYTE   W06
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE   W08
+        BYTE           N07     Bn4   v100
+        BYTE   W08
+        BYTE           N04     An4   v095
+        BYTE   W08
+        BYTE           N30     Gs4   v120   gtp1
+        BYTE   W48
+        BYTE           N06     Fs4   v127
+        BYTE   W24
+// 017   ----------------------------------------
+OneForAllAllForOne_0_LOOP:
+        BYTE   W24
+        BYTE           N08     Bn3   v125
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W24
+        BYTE                   Fs4
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_14
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_15
+// 020   ----------------------------------------
+OneForAllAllForOne_0_20:
+        BYTE   W08
+        BYTE           N07     Bn4   v100
+        BYTE   W08
+        BYTE           N04     An4   v095
+        BYTE   W08
+        BYTE           N68     Bn4   v120   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W24
+        BYTE   W02
+        BYTE           VOL     64
+        BYTE   W68
+        BYTE   W02
+// 029   ----------------------------------------
+OneForAllAllForOne_0_29:
+        BYTE   W24
+        BYTE           N06     Gs2   v110
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE                   Gs2   v073
+        BYTE   W08
+        BYTE                   An2   v110
+        BYTE   W08
+        BYTE                   Bn2   v073
+        BYTE   W08
+        BYTE                   Dn3   v110
+        BYTE   W08
+        BYTE                   Bn2   v073
+        BYTE   W08
+        BYTE   PEND
+// 030   ----------------------------------------
+OneForAllAllForOne_0_30:
+        BYTE           N05     Dn3   v110
+        BYTE   W08
+        BYTE                   Bn2   v073
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE           N06     Gs2   v110
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An2
+        BYTE   W08
+        BYTE                   Gs2   v073
+        BYTE   W08
+        BYTE                   An2   v110
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   Gs2   v073
+        BYTE   W08
+        BYTE                   Bn2   v110
+        BYTE   W08
+        BYTE   PEND
+// 031   ----------------------------------------
+OneForAllAllForOne_0_31:
+        BYTE           N05     Dn3   v110
+        BYTE   W08
+        BYTE                   Bn2   v073
+        BYTE   W08
+        BYTE                   Dn3   v110
+        BYTE   W08
+        BYTE           N20     En3
+        BYTE   W40
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En3
+        BYTE   W04
+        BYTE           N20
+        BYTE   W24
+        BYTE   PEND
+// 032   ----------------------------------------
+OneForAllAllForOne_0_32:
+        BYTE   W16
+        BYTE           N02     En3   v110
+        BYTE   W04
+        BYTE                   En3
+        BYTE   W04
+        BYTE           N08
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N03     Ds3
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+OneForAllAllForOne_0_33:
+        BYTE   W14
+        BYTE           VOL     69
+        BYTE   W10
+        BYTE           N08     Bn3   v125
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W24
+        BYTE                   Fs4
+        BYTE   W24
+        BYTE   PEND
+// 034   ----------------------------------------
+OneForAllAllForOne_0_34:
+        BYTE           N08     An4   v125
+        BYTE   W24
+        BYTE   W02
+        BYTE           N03     Gs4   v113
+        BYTE   W02
+        BYTE                   An4   v086
+        BYTE   W04
+        BYTE                   Gs4   v098
+        BYTE   W04
+        BYTE                   An4   v109
+        BYTE   W04
+        BYTE           N05     Gs4   v106
+        BYTE   W04
+        BYTE                   An4
+        BYTE   W04
+        BYTE           N14     Fs4   v111
+        BYTE   W16
+        BYTE           N05     En4   v106
+        BYTE   W08
+        BYTE           N06     Bn4   v127
+        BYTE   W24
+        BYTE   PEND
+// 035   ----------------------------------------
+OneForAllAllForOne_0_35:
+        BYTE           N06     Bn4   v120
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4
+        BYTE   W10
+        BYTE           N03     An4   v101
+        BYTE   W04
+        BYTE                   Bn4   v100
+        BYTE   W04
+        BYTE                   An4   v102
+        BYTE   W04
+        BYTE                   Bn4   v103
+        BYTE   W04
+        BYTE           N17     An4   v111
+        BYTE   W22
+        BYTE           N04     Fs4   v125
+        BYTE   W10
+        BYTE           N03     Cs5   v095
+        BYTE   W04
+        BYTE                   Ds5
+        BYTE   W04
+        BYTE                   Cs5   v098
+        BYTE   W04
+        BYTE                   Ds5   v099
+        BYTE   W04
+        BYTE           N10     Cs5   v108
+        BYTE   W06
+        BYTE   PEND
+// 036   ----------------------------------------
+OneForAllAllForOne_0_36:
+        BYTE   W08
+        BYTE           N07     Bn4   v110
+        BYTE   W08
+        BYTE           N04     An4
+        BYTE   W08
+        BYTE           N30     Gs4   v120   gtp1
+        BYTE   W48
+        BYTE           N06     Fs4   v127
+        BYTE   W24
+        BYTE   PEND
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_13
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_15
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_20
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W24
+        BYTE   W02
+        BYTE           VOL     64
+        BYTE   W68
+        BYTE   W02
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_29
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_30
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_31
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_32
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_33
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_34
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_35
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_0_36
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+OneForAllAllForOne_1:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   73
+        BYTE           PAN     c_v-10
+        BYTE           VOL     60
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W24
+        BYTE           N06     Gs4   v100
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v063
+        BYTE   W08
+        BYTE                   An4   v100
+        BYTE   W08
+        BYTE                   Bn4   v063
+        BYTE   W08
+        BYTE                   Dn5   v100
+        BYTE   W08
+        BYTE                   Bn4   v063
+        BYTE   W08
+// 006   ----------------------------------------
+        BYTE                   Dn5   v100
+        BYTE   W08
+        BYTE                   Bn4   v063
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE           N06     Gs4   v100
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An4
+        BYTE   W08
+        BYTE                   Gs4   v063
+        BYTE   W08
+        BYTE                   An4   v100
+        BYTE   W08
+        BYTE           N04     Gs4
+        BYTE   W24
+// 007   ----------------------------------------
+        BYTE   W24
+        BYTE           N06
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v063
+        BYTE   W08
+        BYTE                   An4   v100
+        BYTE   W08
+        BYTE           N06     Bn4
+        BYTE   W08
+        BYTE           N05     En5
+        BYTE   W08
+        BYTE                   Dn5   v063
+        BYTE   W08
+// 008   ----------------------------------------
+        BYTE                   En5   v100
+        BYTE   W08
+        BYTE           N06     Bn4
+        BYTE   W08
+        BYTE           N05     An4   v063
+        BYTE   W08
+        BYTE           N06     Gs4   v100
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An4
+        BYTE   W08
+        BYTE                   Gs4   v063
+        BYTE   W08
+        BYTE                   An4   v100
+        BYTE   W08
+        BYTE           N04     Gs4
+        BYTE   W24
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           N07     Gs4   v125
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v088
+        BYTE   W08
+        BYTE                   An4   v125
+        BYTE   W08
+        BYTE                   Bn4   v088
+        BYTE   W08
+        BYTE                   Dn5   v125
+        BYTE   W08
+        BYTE                   Bn4   v088
+        BYTE   W08
+// 010   ----------------------------------------
+        BYTE                   Dn5   v125
+        BYTE   W08
+        BYTE                   Bn4   v088
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE           N07     Gs4   v125
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v088
+        BYTE   W08
+        BYTE                   An4   v125
+        BYTE   W08
+        BYTE                   Bn4
+        BYTE   W08
+        BYTE                   Gs4   v088
+        BYTE   W08
+        BYTE                   Bn4   v125
+        BYTE   W08
+// 011   ----------------------------------------
+        BYTE                   Dn5
+        BYTE   W08
+        BYTE                   Bn4   v088
+        BYTE   W08
+        BYTE                   Dn5   v125
+        BYTE   W08
+        BYTE           N21     En5
+        BYTE   W40
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En5
+        BYTE   W04
+        BYTE           N21
+        BYTE   W24
+// 012   ----------------------------------------
+        BYTE   W16
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En5
+        BYTE   W04
+        BYTE           N09
+        BYTE   W24
+        BYTE           N24     En5   v125   gtp1
+        BYTE   W24
+        BYTE           N03     Ds5   v090
+        BYTE   W24
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+OneForAllAllForOne_1_LOOP:
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+OneForAllAllForOne_1_25:
+        BYTE   W24
+        BYTE           N23     Cn5   v111
+        BYTE   W24
+        BYTE                   An4
+        BYTE   W24
+        BYTE                   En4   v120
+        BYTE   W24
+        BYTE   PEND
+// 026   ----------------------------------------
+OneForAllAllForOne_1_26:
+        BYTE           N23     Cn5   v111
+        BYTE   W24
+        BYTE           N24     Bn4   v120   gtp1
+        BYTE   W48
+        BYTE           N09     En5
+        BYTE   W24
+        BYTE   PEND
+// 027   ----------------------------------------
+OneForAllAllForOne_1_27:
+        BYTE           N09     Gs5   v120
+        BYTE   W24
+        BYTE           N72     Fs5   v111   gtp2
+        BYTE   W72
+        BYTE   PEND
+// 028   ----------------------------------------
+OneForAllAllForOne_1_28:
+        BYTE   W24
+        BYTE           N09     Fs5   v120
+        BYTE   W24
+        BYTE                   Cs5
+        BYTE   W24
+        BYTE                   En5
+        BYTE   W24
+        BYTE   PEND
+// 029   ----------------------------------------
+OneForAllAllForOne_1_29:
+        BYTE           N09     Gs5   v120
+        BYTE   W24
+        BYTE           N07     Gs5   v105
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An5
+        BYTE   W08
+        BYTE                   Gs5   v068
+        BYTE   W08
+        BYTE                   An5   v105
+        BYTE   W08
+        BYTE                   Bn5   v068
+        BYTE   W08
+        BYTE                   Dn6   v105
+        BYTE   W08
+        BYTE                   Bn5   v068
+        BYTE   W08
+        BYTE   PEND
+// 030   ----------------------------------------
+OneForAllAllForOne_1_30:
+        BYTE           N05     Dn6   v105
+        BYTE   W08
+        BYTE                   Bn5   v068
+        BYTE   W08
+        BYTE                   An5
+        BYTE   W08
+        BYTE           N07     Gs5   v105
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An5
+        BYTE   W08
+        BYTE                   Gs5   v068
+        BYTE   W08
+        BYTE                   An5   v105
+        BYTE   W08
+        BYTE                   Bn5
+        BYTE   W08
+        BYTE                   Gs5   v068
+        BYTE   W08
+        BYTE                   Bn5   v105
+        BYTE   W08
+        BYTE   PEND
+// 031   ----------------------------------------
+OneForAllAllForOne_1_31:
+        BYTE           N05     Dn6   v105
+        BYTE   W08
+        BYTE                   Bn5   v068
+        BYTE   W08
+        BYTE                   Dn6   v105
+        BYTE   W08
+        BYTE           N21     En6
+        BYTE   W40
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En6
+        BYTE   W04
+        BYTE           N21
+        BYTE   W24
+        BYTE   PEND
+// 032   ----------------------------------------
+OneForAllAllForOne_1_32:
+        BYTE   W16
+        BYTE           N02     En6   v105
+        BYTE   W04
+        BYTE                   En6
+        BYTE   W04
+        BYTE           N09
+        BYTE   W24
+        BYTE           N24     En6   v105   gtp1
+        BYTE   W24
+        BYTE           N03     Ds6   v070
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_25
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_26
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_27
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_28
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_29
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_30
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_31
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_1_32
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+OneForAllAllForOne_2:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   48
+        BYTE           VOL     57
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+OneForAllAllForOne_2_9:
+        BYTE   W24
+        BYTE           N92     En3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 011   ----------------------------------------
+OneForAllAllForOne_2_11:
+        BYTE   W24
+        BYTE           N92     Fs3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 012   ----------------------------------------
+OneForAllAllForOne_2_12:
+        BYTE   W24
+        BYTE           N08     Fs3   v105
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N02
+        BYTE   W24
+        BYTE   PEND
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+OneForAllAllForOne_2_LOOP:
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+OneForAllAllForOne_2_20:
+        BYTE   W48
+        BYTE           N23     Gs3   v105
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+OneForAllAllForOne_2_21:
+        BYTE           N23     Bn3   v105
+        BYTE   W24
+        BYTE           N15     Cs4
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_2_22:
+        BYTE           N15     Cs4   v105
+        BYTE   W24
+        BYTE           N44     Bn3   v105   gtp3
+        BYTE   W48
+        BYTE                   Gs3
+        BYTE   W24
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_2_23:
+        BYTE   W24
+        BYTE           N44     Fs3   v105   gtp3
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+OneForAllAllForOne_2_24:
+        BYTE   W24
+        BYTE           N44     Gs3   v105   gtp3
+        BYTE   W48
+        BYTE                   Bn3
+        BYTE   W24
+        BYTE   PEND
+// 025   ----------------------------------------
+OneForAllAllForOne_2_25:
+        BYTE   W24
+        BYTE           N92     Cn4   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 026   ----------------------------------------
+OneForAllAllForOne_2_26:
+        BYTE   W24
+        BYTE           N92     Bn3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 027   ----------------------------------------
+OneForAllAllForOne_2_27:
+        BYTE   W24
+        BYTE           N92     An3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 028   ----------------------------------------
+OneForAllAllForOne_2_28:
+        BYTE   W24
+        BYTE           N92     As3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 032   ----------------------------------------
+OneForAllAllForOne_2_32:
+        BYTE   W24
+        BYTE           N08     Bn3   v105
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N02
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_20
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_24
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_25
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_27
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_28
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_26
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_32
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+OneForAllAllForOne_3:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   48
+        BYTE           VOL     62
+        BYTE           PAN     c_v-30
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+OneForAllAllForOne_3_9:
+        BYTE   W24
+        BYTE           N92     Bn2   v085   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_9
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_9
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE           N08     Bn2   v085
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N02
+        BYTE   W24
+// 013   ----------------------------------------
+OneForAllAllForOne_3_13:
+        BYTE   W24
+        BYTE           N11     En3   v110
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE   W24
+        BYTE   PEND
+// 014   ----------------------------------------
+OneForAllAllForOne_3_14:
+        BYTE   W24
+        BYTE           N23     En3   v100
+        BYTE   W24
+        BYTE                   Fs3
+        BYTE   W24
+        BYTE           N11     Gs3   v110
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_3_15:
+        BYTE   W24
+        BYTE           N11     An3   v110
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W24
+        BYTE   PEND
+// 016   ----------------------------------------
+OneForAllAllForOne_3_16:
+        BYTE   W24
+        BYTE           N23     Gs3   v100
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W24
+        BYTE           N11     Bn3   v110
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+OneForAllAllForOne_3_LOOP:
+        BYTE   W24
+        BYTE           N11     En3   v110
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_14
+// 019   ----------------------------------------
+OneForAllAllForOne_3_19:
+        BYTE   W24
+        BYTE           N11     An3   v110
+        BYTE   W48
+        BYTE                   Cs4
+        BYTE   W24
+        BYTE   PEND
+// 020   ----------------------------------------
+OneForAllAllForOne_3_20:
+        BYTE   W48
+        BYTE           N23     Gs2   v105
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+OneForAllAllForOne_3_21:
+        BYTE           N23     Bn2   v105
+        BYTE   W24
+        BYTE           N92     Cs3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_3_22:
+        BYTE   W24
+        BYTE           N44     En3   v105   gtp3
+        BYTE   W48
+        BYTE                   En3
+        BYTE   W24
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_3_23:
+        BYTE   W24
+        BYTE           N44     Cs3   v105   gtp3
+        BYTE   W48
+        BYTE                   Fs3
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_12
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_13
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_14
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_15
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_16
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_13
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_19
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_20
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_9
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_11
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_2_12
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_13
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_14
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_15
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_3_16
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+OneForAllAllForOne_4:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   48
+        BYTE           VOL     62
+        BYTE           PAN     c_v+30
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+OneForAllAllForOne_4_9:
+        BYTE   W24
+        BYTE           N92     En2   v085   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_9
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_9
+// 012   ----------------------------------------
+        BYTE   W24
+        BYTE           N08     En2   v085
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N02     Ds2
+        BYTE   W24
+// 013   ----------------------------------------
+OneForAllAllForOne_4_13:
+        BYTE   W24
+        BYTE           N11     Gs2   v110
+        BYTE   W48
+        BYTE                   An2
+        BYTE   W24
+        BYTE   PEND
+// 014   ----------------------------------------
+OneForAllAllForOne_4_14:
+        BYTE   W24
+        BYTE           N23     Gs2   v100
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE           N11     Bn2   v110
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_4_15:
+        BYTE   W24
+        BYTE           N11     Cs3   v110
+        BYTE   W48
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE   PEND
+// 016   ----------------------------------------
+OneForAllAllForOne_4_16:
+        BYTE   W24
+        BYTE           N23     Bn2   v100
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE           N11     Ds3   v110
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+OneForAllAllForOne_4_LOOP:
+        BYTE   W24
+        BYTE           N11     Gs2   v110
+        BYTE   W48
+        BYTE                   An2
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_14
+// 019   ----------------------------------------
+OneForAllAllForOne_4_19:
+        BYTE   W24
+        BYTE           N11     Cs3   v110
+        BYTE   W48
+        BYTE                   As2
+        BYTE   W24
+        BYTE   PEND
+// 020   ----------------------------------------
+OneForAllAllForOne_4_20:
+        BYTE   W48
+        BYTE           N23     En2   v105
+        BYTE   W24
+        BYTE                   Fs2
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+OneForAllAllForOne_4_21:
+        BYTE           N23     Gs2   v105
+        BYTE   W24
+        BYTE           N92     An2   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_4_22:
+        BYTE   W24
+        BYTE           N44     Gs2   v105   gtp3
+        BYTE   W48
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_4_23:
+        BYTE   W24
+        BYTE           N44     An2   v105   gtp3
+        BYTE   W48
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+OneForAllAllForOne_4_24:
+        BYTE   W24
+        BYTE           N44     Bn2   v105   gtp3
+        BYTE   W48
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE   PEND
+// 025   ----------------------------------------
+OneForAllAllForOne_4_25:
+        BYTE   W24
+        BYTE           N92     An2   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 026   ----------------------------------------
+OneForAllAllForOne_4_26:
+        BYTE   W24
+        BYTE           N92     Gs2   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_25
+// 028   ----------------------------------------
+OneForAllAllForOne_4_28:
+        BYTE   W24
+        BYTE           N92     Cs3   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 029   ----------------------------------------
+OneForAllAllForOne_4_29:
+        BYTE   W24
+        BYTE           N92     Bn2   v105   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_29
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_29
+// 032   ----------------------------------------
+OneForAllAllForOne_4_32:
+        BYTE   W24
+        BYTE           N08     Bn2   v105
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N02
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_13
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_14
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_15
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_16
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_13
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_19
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_20
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_24
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_25
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_26
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_25
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_28
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_29
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_29
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_29
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_32
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_13
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_14
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_15
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_4_16
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+OneForAllAllForOne_5:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   40
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOL     51
+        BYTE           PAN     c_v+15
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W84
+        BYTE   W02
+        BYTE           VOL     43
+        BYTE           PAN     c_v+10
+        BYTE   W10
+// 005   ----------------------------------------
+        BYTE   W24
+        BYTE           N06     Gs4   v120
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v083
+        BYTE   W08
+        BYTE                   An4   v120
+        BYTE   W08
+        BYTE                   Bn4   v083
+        BYTE   W08
+        BYTE                   Dn5   v120
+        BYTE   W08
+        BYTE                   Bn4   v083
+        BYTE   W08
+// 006   ----------------------------------------
+        BYTE                   Dn5   v120
+        BYTE   W08
+        BYTE                   Bn4   v083
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE           N06     Gs4   v120
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An4
+        BYTE   W08
+        BYTE                   Gs4   v083
+        BYTE   W08
+        BYTE                   An4   v120
+        BYTE   W08
+        BYTE           N04     Gs4
+        BYTE   W24
+// 007   ----------------------------------------
+        BYTE   W24
+        BYTE           N06
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An4
+        BYTE   W08
+        BYTE                   Gs4   v083
+        BYTE   W08
+        BYTE                   An4   v120
+        BYTE   W08
+        BYTE           N06     Bn4
+        BYTE   W08
+        BYTE           N05     En5
+        BYTE   W08
+        BYTE                   Dn5   v083
+        BYTE   W08
+// 008   ----------------------------------------
+        BYTE                   En5   v120
+        BYTE   W08
+        BYTE           N06     Bn4
+        BYTE   W08
+        BYTE           N05     An4   v083
+        BYTE   W08
+        BYTE           N06     Gs4   v120
+        BYTE   W16
+        BYTE           N04
+        BYTE   W08
+        BYTE           N05     An4
+        BYTE   W08
+        BYTE                   Gs4   v083
+        BYTE   W08
+        BYTE                   An4   v120
+        BYTE   W08
+        BYTE           N04     Gs4
+        BYTE   W24
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W56
+        BYTE           VOL     64
+        BYTE           PAN     c_v+15
+        BYTE   W40
+// 013   ----------------------------------------
+OneForAllAllForOne_5_13:
+        BYTE   W40
+        BYTE           N04     Bn2   v110
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE   PEND
+// 014   ----------------------------------------
+OneForAllAllForOne_5_14:
+        BYTE   W16
+        BYTE           N04     Cs3   v110
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE           N23     Cs3   v090
+        BYTE   W24
+        BYTE           N04     Bn2   v110
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_5_15:
+        BYTE           N23     Bn2   v090
+        BYTE   W40
+        BYTE           N04     Cs3   v110
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W08
+        BYTE   PEND
+// 016   ----------------------------------------
+OneForAllAllForOne_5_16:
+        BYTE   W16
+        BYTE           N04     Cs3   v110
+        BYTE   W08
+        BYTE           N20     En3
+        BYTE   W24
+        BYTE           N04     En3   v120
+        BYTE   W08
+        BYTE                   Fs3
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   Ds3
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+OneForAllAllForOne_5_LOOP:
+        BYTE   W40
+        BYTE           N04     Bn2   v110
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W08
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_14
+// 019   ----------------------------------------
+OneForAllAllForOne_5_19:
+        BYTE           N23     Bn2   v090
+        BYTE   W40
+        BYTE           N04     En3   v110
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W08
+        BYTE   PEND
+// 020   ----------------------------------------
+OneForAllAllForOne_5_20:
+        BYTE   W16
+        BYTE           N04     En3   v110
+        BYTE   W08
+        BYTE           N23     Ds3
+        BYTE   W24
+        BYTE           N04     Cs3   v120
+        BYTE   W08
+        BYTE                   Ds3
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           N44     Ds3   v110   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_13
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_14
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_15
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_16
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_13
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_19
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_20
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W96
+// 049   ----------------------------------------
+        BYTE   W96
+// 050   ----------------------------------------
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_13
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_14
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_15
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_5_16
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+OneForAllAllForOne_6:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   40
+        BYTE           VOL     60
+        BYTE           PAN     c_v-15
+        BYTE   W24
+        BYTE                   c_v+0
+        BYTE           VOICE   68
+        BYTE   W24
+        BYTE           N04     En3   v127
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           N96     Bn3
+        BYTE   W24
+// 002   ----------------------------------------
+OneForAllAllForOne_6_2:
+        BYTE   W18
+        BYTE           VOL     59
+        BYTE   W03
+        BYTE                   58
+        BYTE   W06
+        BYTE                   57
+        BYTE   W03
+        BYTE                   56
+        BYTE   W06
+        BYTE                   54
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   52
+        BYTE   W03
+        BYTE                   51
+        BYTE   W03
+        BYTE                   49
+        BYTE   W03
+        BYTE                   48
+        BYTE   W03
+        BYTE                   46
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   43
+        BYTE   W03
+        BYTE                   41
+        BYTE   W03
+        BYTE                   39
+        BYTE   W03
+        BYTE                   37
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   32
+        BYTE   W03
+        BYTE                   30
+        BYTE   W03
+        BYTE                   28
+        BYTE   W03
+        BYTE                   25
+        BYTE   W03
+        BYTE                   23
+        BYTE   W03
+        BYTE                   20
+        BYTE   W03
+        BYTE                   17
+        BYTE   W03
+        BYTE   PEND
+// 003   ----------------------------------------
+OneForAllAllForOne_6_3:
+        BYTE           VOL     14
+        BYTE   W03
+        BYTE                   11
+        BYTE   W03
+        BYTE                   8
+        BYTE   W30
+        BYTE                   60
+        BYTE   W12
+        BYTE           N04     En3   v127
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           TIE     Bn3
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+OneForAllAllForOne_6_4:
+        BYTE   W18
+        BYTE           VOL     58
+        BYTE   W06
+        BYTE                   57
+        BYTE   W06
+        BYTE                   56
+        BYTE   W03
+        BYTE                   55
+        BYTE   W03
+        BYTE                   54
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   51
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   48
+        BYTE   W03
+        BYTE                   46
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   43
+        BYTE   W03
+        BYTE                   41
+        BYTE   W03
+        BYTE                   39
+        BYTE   W03
+        BYTE                   37
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   32
+        BYTE   W03
+        BYTE                   29
+        BYTE   W03
+        BYTE                   27
+        BYTE   W03
+        BYTE                   24
+        BYTE   W03
+        BYTE                   22
+        BYTE   W03
+        BYTE                   15
+        BYTE   W09
+        BYTE   PEND
+// 005   ----------------------------------------
+        BYTE           EOT     Bn3
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           VOL     60
+        BYTE   W24
+        BYTE           N04     En3   v127
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           N96     Bn3
+        BYTE   W24
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_4
+// 013   ----------------------------------------
+        BYTE           EOT     Bn3
+        BYTE   W24
+        BYTE   W02
+        BYTE           VOICE   40
+        BYTE   W01
+        BYTE           VOL     64
+        BYTE           PAN     c_v-15
+        BYTE   W13
+        BYTE           N04     Gs2   v110
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W08
+// 014   ----------------------------------------
+OneForAllAllForOne_6_14:
+        BYTE   W16
+        BYTE           N04     An2   v110
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W08
+        BYTE           N23     An2   v090
+        BYTE   W24
+        BYTE           N04     Gs2   v110
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_6_15:
+        BYTE           N23     Gs2   v090
+        BYTE   W40
+        BYTE           N04     An2   v110
+        BYTE   W24
+        BYTE                   Fs2
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE   PEND
+// 016   ----------------------------------------
+OneForAllAllForOne_6_16:
+        BYTE   W16
+        BYTE           N04     An2   v110
+        BYTE   W08
+        BYTE           N20     Bn2
+        BYTE   W24
+        BYTE           N04     Cs3   v120
+        BYTE   W08
+        BYTE                   Ds3
+        BYTE   W08
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+OneForAllAllForOne_6_LOOP:
+        BYTE   W40
+        BYTE           N04     Gs2   v110
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W08
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_14
+// 019   ----------------------------------------
+OneForAllAllForOne_6_19:
+        BYTE           N23     Gs2   v090
+        BYTE   W40
+        BYTE           N04     Cs3   v110
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE   PEND
+// 020   ----------------------------------------
+OneForAllAllForOne_6_20:
+        BYTE   W16
+        BYTE           N04     Cs3   v110
+        BYTE   W08
+        BYTE           N23     Bn2
+        BYTE   W24
+        BYTE           N04     An2   v120
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE           N44     Bn2   v110   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+OneForAllAllForOne_6_33:
+        BYTE   W40
+        BYTE           N04     Gs2   v110
+        BYTE   W24
+        BYTE                   Gs2
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W08
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_14
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_15
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_16
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_33
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_19
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_20
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W96
+// 049   ----------------------------------------
+        BYTE   W96
+// 050   ----------------------------------------
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_33
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_14
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_15
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_6_16
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_6_LOOP
+        BYTE   FINE
+
+//****************** Track 7 (Midi-Chn.7) ******************//
+
+OneForAllAllForOne_7:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   108
+        BYTE           VOL     60
+        BYTE   W36
+        BYTE           PAN     c_v-64
+        BYTE           VOICE   68
+        BYTE   W24
+        BYTE           N04     En3   v074
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           N96     Bn3
+        BYTE   W12
+// 002   ----------------------------------------
+OneForAllAllForOne_7_2:
+        BYTE   W30
+        BYTE           VOL     59
+        BYTE   W03
+        BYTE                   58
+        BYTE   W06
+        BYTE                   57
+        BYTE   W03
+        BYTE                   56
+        BYTE   W06
+        BYTE                   54
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   52
+        BYTE   W03
+        BYTE                   51
+        BYTE   W03
+        BYTE                   49
+        BYTE   W03
+        BYTE                   48
+        BYTE   W03
+        BYTE                   46
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   43
+        BYTE   W03
+        BYTE                   41
+        BYTE   W03
+        BYTE                   39
+        BYTE   W03
+        BYTE                   37
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   32
+        BYTE   W03
+        BYTE                   30
+        BYTE   W03
+        BYTE                   28
+        BYTE   W03
+        BYTE   PEND
+// 003   ----------------------------------------
+OneForAllAllForOne_7_3:
+        BYTE           VOL     25
+        BYTE   W03
+        BYTE                   23
+        BYTE   W03
+        BYTE                   20
+        BYTE   W03
+        BYTE                   17
+        BYTE   W03
+        BYTE                   14
+        BYTE   W03
+        BYTE                   11
+        BYTE   W03
+        BYTE                   8
+        BYTE   W30
+        BYTE                   60
+        BYTE   W12
+        BYTE           N04     En3   v074
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           TIE     Bn3
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+OneForAllAllForOne_7_4:
+        BYTE   W30
+        BYTE           VOL     58
+        BYTE   W06
+        BYTE                   57
+        BYTE   W06
+        BYTE                   56
+        BYTE   W03
+        BYTE                   55
+        BYTE   W03
+        BYTE                   54
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   51
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   48
+        BYTE   W03
+        BYTE                   46
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   43
+        BYTE   W03
+        BYTE                   41
+        BYTE   W03
+        BYTE                   39
+        BYTE   W03
+        BYTE                   37
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   32
+        BYTE   W03
+        BYTE                   29
+        BYTE   W03
+        BYTE                   27
+        BYTE   W03
+        BYTE                   24
+        BYTE   W03
+        BYTE   PEND
+// 005   ----------------------------------------
+OneForAllAllForOne_7_5:
+        BYTE           VOL     22
+        BYTE   W03
+        BYTE                   15
+        BYTE   W09
+        BYTE           EOT     Bn3
+        BYTE   W84
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W36
+        BYTE           VOL     60
+        BYTE   W24
+        BYTE           N04     En3   v074
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE           N96     Bn3
+        BYTE   W12
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_5
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+OneForAllAllForOne_7_LOOP:
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W68
+        BYTE           VOICE   108
+        BYTE   W01
+        BYTE           VOL     60
+        BYTE           PAN     c_v+0
+        BYTE   W24
+        BYTE   W03
+// 021   ----------------------------------------
+OneForAllAllForOne_7_21:
+        BYTE   W24
+        BYTE           N08     An2   v110
+        BYTE   W08
+        BYTE           N07     Cs3
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE                   Cs4
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE                   Cs4
+        BYTE   W08
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_7_22:
+        BYTE           N07     En4   v110
+        BYTE   W24
+        BYTE           N08     Gs2
+        BYTE   W08
+        BYTE           N07     Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   Gs3
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   Gs3
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gs3
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_7_23:
+        BYTE           N07     En4   v110
+        BYTE   W24
+        BYTE           N08     Fs2
+        BYTE   W08
+        BYTE           N07     An2
+        BYTE   W08
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE                   Fs3
+        BYTE   W08
+        BYTE                   Cs3
+        BYTE   W08
+        BYTE                   Fs3
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+OneForAllAllForOne_7_24:
+        BYTE   W24
+        BYTE           N08     En2   v110
+        BYTE   W08
+        BYTE           N07     Gs2
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+        BYTE                   Gs3
+        BYTE   W24
+        BYTE   PEND
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_7_24
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W96
+// 049   ----------------------------------------
+        BYTE   W96
+// 050   ----------------------------------------
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE           VOICE   68
+        BYTE           VOL     15
+        BYTE           PAN     c_v-64
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_7_LOOP
+        BYTE   FINE
+
+//****************** Track 8 (Midi-Chn.8) ******************//
+
+OneForAllAllForOne_8:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   40
+        BYTE           VOL     64
+        BYTE           PAN     c_v+10
+        BYTE   W48
+        BYTE                   c_v+63
+        BYTE           VOICE   68
+        BYTE   W24
+        BYTE           N04     En3   v050
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+// 002   ----------------------------------------
+        BYTE           N96     Bn3
+        BYTE   W44
+        BYTE   W01
+        BYTE           VOL     63
+        BYTE   W06
+        BYTE                   61
+        BYTE   W06
+        BYTE                   60
+        BYTE   W03
+        BYTE                   59
+        BYTE   W03
+        BYTE                   58
+        BYTE   W03
+        BYTE                   57
+        BYTE   W03
+        BYTE                   55
+        BYTE   W03
+        BYTE                   53
+        BYTE   W03
+        BYTE                   52
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   49
+        BYTE   W03
+        BYTE                   47
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   42
+        BYTE   W03
+        BYTE                   41
+        BYTE   W03
+// 003   ----------------------------------------
+        BYTE                   38
+        BYTE   W03
+        BYTE                   35
+        BYTE   W03
+        BYTE                   33
+        BYTE   W03
+        BYTE                   30
+        BYTE   W03
+        BYTE                   27
+        BYTE   W03
+        BYTE                   25
+        BYTE   W03
+        BYTE                   21
+        BYTE   W03
+        BYTE                   18
+        BYTE   W03
+        BYTE                   15
+        BYTE   W03
+        BYTE                   12
+        BYTE   W03
+        BYTE                   9
+        BYTE   W30
+        BYTE                   64
+        BYTE   W12
+        BYTE           N04     En3
+        BYTE   W08
+        BYTE                   Bn2
+        BYTE   W08
+        BYTE                   En3
+        BYTE   W08
+// 004   ----------------------------------------
+        BYTE           TIE     Bn3
+        BYTE   W42
+        BYTE           VOL     63
+        BYTE   W06
+        BYTE                   62
+        BYTE   W03
+        BYTE                   61
+        BYTE   W06
+        BYTE                   60
+        BYTE   W03
+        BYTE                   58
+        BYTE   W03
+        BYTE                   57
+        BYTE   W03
+        BYTE                   55
+        BYTE   W03
+        BYTE                   54
+        BYTE   W03
+        BYTE                   52
+        BYTE   W03
+        BYTE                   50
+        BYTE   W03
+        BYTE                   49
+        BYTE   W03
+        BYTE                   47
+        BYTE   W03
+        BYTE                   45
+        BYTE   W03
+        BYTE                   42
+        BYTE   W03
+        BYTE                   40
+        BYTE   W03
+        BYTE                   37
+        BYTE   W03
+// 005   ----------------------------------------
+        BYTE                   35
+        BYTE   W03
+        BYTE                   32
+        BYTE   W03
+        BYTE                   29
+        BYTE   W03
+        BYTE                   26
+        BYTE   W03
+        BYTE                   23
+        BYTE   W03
+        BYTE                   17
+        BYTE   W09
+        BYTE           EOT
+        BYTE   W72
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W48
+        BYTE   W02
+        BYTE           VOICE   40
+        BYTE   W01
+        BYTE           VOL     64
+        BYTE           PAN     c_v+10
+        BYTE   W44
+        BYTE   W01
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           N06     Gs3   v080
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE                   Gs3   v043
+        BYTE   W08
+        BYTE                   An3   v080
+        BYTE   W08
+        BYTE                   Bn3   v043
+        BYTE   W08
+        BYTE                   Dn4   v080
+        BYTE   W08
+        BYTE                   Bn3   v043
+        BYTE   W08
+// 010   ----------------------------------------
+        BYTE                   Dn4   v080
+        BYTE   W08
+        BYTE                   Bn3   v043
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE           N06     Gs3   v080
+        BYTE   W16
+        BYTE           N05
+        BYTE   W08
+        BYTE                   An3
+        BYTE   W08
+        BYTE                   Gs3   v043
+        BYTE   W08
+        BYTE                   An3   v080
+        BYTE   W08
+        BYTE                   Bn3
+        BYTE   W08
+        BYTE                   Gs3   v043
+        BYTE   W08
+        BYTE                   Bn3   v080
+        BYTE   W08
+// 011   ----------------------------------------
+        BYTE                   Dn4
+        BYTE   W08
+        BYTE                   Bn3   v043
+        BYTE   W08
+        BYTE                   Dn4   v080
+        BYTE   W08
+        BYTE           N20     En4
+        BYTE   W40
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE           N20
+        BYTE   W24
+// 012   ----------------------------------------
+        BYTE   W16
+        BYTE           N02
+        BYTE   W04
+        BYTE                   En4
+        BYTE   W04
+        BYTE           N08
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N03     Ds4
+        BYTE   W24
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+OneForAllAllForOne_8_LOOP:
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+OneForAllAllForOne_8_21:
+        BYTE   W24
+        BYTE           N24     Cs4   v090   gtp3
+        BYTE   W24
+        BYTE   W01
+        BYTE           N23     An3   v080
+        BYTE   W23
+        BYTE           N24     En3   v065   gtp1
+        BYTE   W23
+        BYTE           N24     Cs4   v090   gtp2
+        BYTE   W01
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_8_22:
+        BYTE   W24
+        BYTE           N48     Bn3   v080   gtp1
+        BYTE   W48
+        BYTE           N42     Gs3   v065   gtp1
+        BYTE   W24
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_8_23:
+        BYTE   W24
+        BYTE           N15     An3   v100
+        BYTE   W16
+        BYTE           N07     An3   v070
+        BYTE   W08
+        BYTE                   An3   v090
+        BYTE   W08
+        BYTE                   Gs3   v055
+        BYTE   W08
+        BYTE                   An3   v070
+        BYTE   W08
+        BYTE           N32     Fs3   v075   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+OneForAllAllForOne_8_24:
+        BYTE   W24
+        BYTE           N15     Bn3   v100
+        BYTE   W16
+        BYTE           N07     Bn3   v070
+        BYTE   W08
+        BYTE                   Bn3   v090
+        BYTE   W08
+        BYTE                   An3   v055
+        BYTE   W08
+        BYTE                   Bn3   v070
+        BYTE   W08
+        BYTE           N32     Gs3   v075   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 025   ----------------------------------------
+OneForAllAllForOne_8_25:
+        BYTE   W24
+        BYTE           N23     Cn4   v090
+        BYTE   W24
+        BYTE                   An3   v080
+        BYTE   W24
+        BYTE                   En3   v065
+        BYTE   W24
+        BYTE   PEND
+// 026   ----------------------------------------
+OneForAllAllForOne_8_26:
+        BYTE           N23     Cn4   v090
+        BYTE   W24
+        BYTE           N32     Bn3   v080   gtp3
+        BYTE   W48
+        BYTE           N07     En4   v090
+        BYTE   W08
+        BYTE                   En4   v050
+        BYTE   W16
+        BYTE   PEND
+// 027   ----------------------------------------
+OneForAllAllForOne_8_27:
+        BYTE           N07     Gs4   v090
+        BYTE   W08
+        BYTE                   Gs4   v050
+        BYTE   W16
+        BYTE           N68     Fs4   v090   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 028   ----------------------------------------
+OneForAllAllForOne_8_28:
+        BYTE   W24
+        BYTE           N07     Fs4   v090
+        BYTE   W08
+        BYTE                   Fs4   v050
+        BYTE   W16
+        BYTE                   Cs4   v090
+        BYTE   W08
+        BYTE                   Cs4   v050
+        BYTE   W16
+        BYTE                   En4   v090
+        BYTE   W08
+        BYTE                   En4   v050
+        BYTE   W16
+        BYTE   PEND
+// 029   ----------------------------------------
+OneForAllAllForOne_8_29:
+        BYTE           N07     Gs4   v090
+        BYTE   W08
+        BYTE                   Gs4   v050
+        BYTE   W16
+        BYTE           TIE     Fs4   v090
+        BYTE   W72
+        BYTE   PEND
+// 030   ----------------------------------------
+        BYTE   W68
+        BYTE   W03
+        BYTE           EOT
+        BYTE   W24
+        BYTE   W01
+// 031   ----------------------------------------
+OneForAllAllForOne_8_31:
+        BYTE           N07     Bn3   v090
+        BYTE   W08
+        BYTE                   Bn3   v050
+        BYTE   W08
+        BYTE                   Bn3   v090
+        BYTE   W08
+        BYTE           N23     Bn4
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   Bn4
+        BYTE   W04
+        BYTE           N23
+        BYTE   W24
+        BYTE   PEND
+// 032   ----------------------------------------
+OneForAllAllForOne_8_32:
+        BYTE   W16
+        BYTE           N01     Bn4   v090
+        BYTE   W04
+        BYTE                   Bn4
+        BYTE   W04
+        BYTE           N05
+        BYTE   W24
+        BYTE           N23
+        BYTE   W24
+        BYTE           N05
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_24
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_25
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_26
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_27
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_28
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_29
+// 050   ----------------------------------------
+        BYTE   W68
+        BYTE   W03
+        BYTE           EOT     Fs4
+        BYTE   W24
+        BYTE   W01
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_31
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_8_32
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_8_LOOP
+        BYTE   FINE
+
+//***************** Track 9 (Midi-Chn.10) ******************//
+
+OneForAllAllForOne_9:
+        BYTE   KEYSH   OneForAllAllForOne_key+0
+// 000   ----------------------------------------
+        BYTE   W24
+// 001   ----------------------------------------
+        BYTE           VOICE   39
+        BYTE           VOL     64
+        BYTE           N06     Bn0   v095
+        BYTE   W06
+        BYTE                   Bn0   v098
+        BYTE   W06
+        BYTE                   Bn0   v105
+        BYTE   W06
+        BYTE                   Bn0   v111
+        BYTE   W06
+        BYTE           N07     En1   v120
+        BYTE   W48
+        BYTE                   En1
+        BYTE   W24
+// 002   ----------------------------------------
+OneForAllAllForOne_9_2:
+        BYTE   W24
+        BYTE           N07     En1   v120
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   En1
+        BYTE   W24
+        BYTE   PEND
+// 003   ----------------------------------------
+OneForAllAllForOne_9_3:
+        BYTE           N23     Bn0   v095
+        BYTE   W24
+        BYTE           N07     En1   v120
+        BYTE   W48
+        BYTE                   En1
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_2
+// 005   ----------------------------------------
+        BYTE   W24
+        BYTE           N07     En1   v120
+        BYTE   W48
+        BYTE                   En1
+        BYTE   W24
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_2
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_2
+// 009   ----------------------------------------
+        BYTE   W24
+        BYTE           N07     An1   v127
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   An1
+        BYTE   W04
+        BYTE           N44     An1   v090   gtp3
+        BYTE   W24
+// 010   ----------------------------------------
+        BYTE   W24
+        BYTE           N07     Gs1   v127
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   Gs1
+        BYTE   W04
+        BYTE           N44     Gs1   v090   gtp3
+        BYTE   W24
+// 011   ----------------------------------------
+        BYTE   W24
+        BYTE           N08     Bn0   v127
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   Bn0
+        BYTE   W04
+        BYTE           N08
+        BYTE   W24
+// 012   ----------------------------------------
+        BYTE   W16
+        BYTE           N01
+        BYTE   W04
+        BYTE                   Bn0
+        BYTE   W04
+        BYTE           N08     Bn0   v117
+        BYTE   W24
+        BYTE           N23     Fs1   v090
+        BYTE   W24
+        BYTE           N08     Bn0   v117
+        BYTE   W24
+// 013   ----------------------------------------
+        BYTE           N23     Bn0   v100
+        BYTE   W24
+        BYTE           N08     En1   v127
+        BYTE   W40
+        BYTE           N07     Bn0
+        BYTE   W08
+        BYTE           N08     Fs1
+        BYTE   W24
+// 014   ----------------------------------------
+OneForAllAllForOne_9_14:
+        BYTE   W16
+        BYTE           N07     Bn0   v127
+        BYTE   W08
+        BYTE           N08     En1
+        BYTE   W24
+        BYTE           N23     Bn0   v115
+        BYTE   W24
+        BYTE           N08     En1   v127
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+OneForAllAllForOne_9_15:
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     An0   v127
+        BYTE   W24
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     An0   v127
+        BYTE   W24
+        BYTE   PEND
+// 016   ----------------------------------------
+OneForAllAllForOne_9_16:
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     Bn0   v127
+        BYTE   W24
+        BYTE           N23     Fs1   v115
+        BYTE   W24
+        BYTE           N08     Bn0   v127
+        BYTE   W24
+        BYTE   PEND
+// 017   ----------------------------------------
+OneForAllAllForOne_9_LOOP:
+        BYTE   W24
+        BYTE           N08     En1   v127
+        BYTE   W40
+        BYTE           N07     Bn0
+        BYTE   W08
+        BYTE           N08     Fs1
+        BYTE   W24
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_14
+// 019   ----------------------------------------
+OneForAllAllForOne_9_19:
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     An0   v127
+        BYTE   W24
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     As0   v127
+        BYTE   W24
+        BYTE   PEND
+// 020   ----------------------------------------
+OneForAllAllForOne_9_20:
+        BYTE           N23     En1   v115
+        BYTE   W24
+        BYTE           N08     Bn0   v127
+        BYTE   W48
+        BYTE           N23     An1   v115
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+OneForAllAllForOne_9_21:
+        BYTE           N23     Bn1   v115
+        BYTE   W24
+        BYTE           N16     An1   v110
+        BYTE   W24
+        BYTE                   An1
+        BYTE   W24
+        BYTE                   An1
+        BYTE   W24
+        BYTE   PEND
+// 022   ----------------------------------------
+OneForAllAllForOne_9_22:
+        BYTE           N16     An1   v106
+        BYTE   W24
+        BYTE                   Gs1   v110
+        BYTE   W24
+        BYTE                   Gs1   v109
+        BYTE   W24
+        BYTE                   Gs1   v110
+        BYTE   W24
+        BYTE   PEND
+// 023   ----------------------------------------
+OneForAllAllForOne_9_23:
+        BYTE           N16     Gs1   v108
+        BYTE   W24
+        BYTE                   Fs1   v110
+        BYTE   W24
+        BYTE                   Fs1   v109
+        BYTE   W24
+        BYTE                   Fs1   v110
+        BYTE   W24
+        BYTE   PEND
+// 024   ----------------------------------------
+OneForAllAllForOne_9_24:
+        BYTE           N16     Fs1   v108
+        BYTE   W24
+        BYTE           N11     En1   v127
+        BYTE   W24
+        BYTE           N23     En2
+        BYTE   W24
+        BYTE                   Bn1   v100
+        BYTE   W24
+        BYTE   PEND
+// 025   ----------------------------------------
+OneForAllAllForOne_9_25:
+        BYTE           N23     Gs1   v100
+        BYTE   W24
+        BYTE           N16     An1   v110
+        BYTE   W24
+        BYTE                   An1   v109
+        BYTE   W24
+        BYTE                   An1   v110
+        BYTE   W24
+        BYTE   PEND
+// 026   ----------------------------------------
+OneForAllAllForOne_9_26:
+        BYTE           N16     An1   v108
+        BYTE   W24
+        BYTE                   Gs1   v110
+        BYTE   W24
+        BYTE                   Gs1   v109
+        BYTE   W24
+        BYTE                   Gs1   v110
+        BYTE   W24
+        BYTE   PEND
+// 027   ----------------------------------------
+OneForAllAllForOne_9_27:
+        BYTE           N16     Gs1   v108
+        BYTE   W24
+        BYTE           N07     An1   v127
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   An1
+        BYTE   W04
+        BYTE           N05
+        BYTE   W24
+        BYTE   PEND
+// 028   ----------------------------------------
+OneForAllAllForOne_9_28:
+        BYTE           N23     An1   v110
+        BYTE   W24
+        BYTE           N07     As1   v127
+        BYTE   W40
+        BYTE           N01
+        BYTE   W04
+        BYTE                   As1
+        BYTE   W04
+        BYTE           N05     As1   v110
+        BYTE   W24
+        BYTE   PEND
+// 029   ----------------------------------------
+OneForAllAllForOne_9_29:
+        BYTE           N23     As1   v110
+        BYTE   W24
+        BYTE           N07     Bn0   v127
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE   PEND
+// 030   ----------------------------------------
+OneForAllAllForOne_9_30:
+        BYTE           N07     Bn0   v127
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE   PEND
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_30
+// 032   ----------------------------------------
+OneForAllAllForOne_9_32:
+        BYTE           N07     Bn0   v127
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE           N23     Fs1   v120
+        BYTE   W24
+        BYTE           N07     Bn0   v127
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+OneForAllAllForOne_9_33:
+        BYTE           N23     Bn0   v127
+        BYTE   W24
+        BYTE           N08     En1
+        BYTE   W40
+        BYTE           N07     Bn0
+        BYTE   W08
+        BYTE           N08     Fs1
+        BYTE   W24
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_14
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_15
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_16
+// 037   ----------------------------------------
+        BYTE   W24
+        BYTE           N08     En1   v127
+        BYTE   W40
+        BYTE           N07     Bn0
+        BYTE   W08
+        BYTE           N08     Fs1
+        BYTE   W24
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_14
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_19
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_20
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_21
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_22
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_23
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_24
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_25
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_26
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_27
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_28
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_29
+// 050   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_30
+// 051   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_30
+// 052   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_32
+// 053   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_33
+// 054   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_14
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_15
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  OneForAllAllForOne_9_16
+// 057   ----------------------------------------
+        BYTE   GoTo
+         POIN2  OneForAllAllForOne_9_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+OneForAllAllForOne:
+        BYTE   10                      // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   OneForAllAllForOne_pri  // Priority
+        BYTE   OneForAllAllForOne_rev  // Reverb
+
+        POIN2   OneForAllAllForOne_grp 
+
+        POIN2   OneForAllAllForOne_0
+        POIN2   OneForAllAllForOne_1
+        POIN2   OneForAllAllForOne_2
+        POIN2   OneForAllAllForOne_3
+        POIN2   OneForAllAllForOne_4
+        POIN2   OneForAllAllForOne_5
+        POIN2   OneForAllAllForOne_6
+        POIN2   OneForAllAllForOne_7
+        POIN2   OneForAllAllForOne_8
+        POIN2   OneForAllAllForOne_9
+
+        
