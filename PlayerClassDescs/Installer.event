@@ -1,0 +1,42 @@
+#define PlayerClassDescEntry(class, textid) "PUSH; ORG PlayerClassDescTable+(class*2); SHORT textid; POP"
+
+PlayerClassDescTable:
+FILL 0xFF*2
+
+// Intended use of macro here
+/*
+PlayerClassDescEntry(Gremory, GremoryDesc)
+PlayerClassDescEntry(HighGremory, HighGremoryDesc)
+PlayerClassDescEntry(Princess, PrincessDesc)
+PlayerClassDescEntry(VioletKnight, VioletKnightDesc)
+
+PlayerClassDescEntry(Myrmidon, MyrmidonPlayerDesc)
+PlayerClassDescEntry(Trueblade, TruebladePlayerDesc)
+PlayerClassDescEntry(Mercenary, MercenaryPlayerDesc)
+PlayerClassDescEntry(Hero, HeroPlayerDesc)
+PlayerClassDescEntry(Runelord, RunelordPlayerDesc)
+
+PlayerClassDescEntry(Thief, ThiefPlayerDesc)
+PlayerClassDescEntry(Rogue, RoguePlayerDesc)
+PlayerClassDescEntry(Hunter, HunterPlayerDesc)
+PlayerClassDescEntry(Marksman, MercenaryPlayerDesc)
+PlayerClassDescEntry(Trickster, TricksterPlayerDesc)
+
+PlayerClassDescEntry(Lancer, LancerPlayerDesc)
+PlayerClassDescEntry(Halberdier, HalberdierPlayerDesc)
+PlayerClassDescEntry(Villager, VillagerPlayerDesc)
+PlayerClassDescEntry(Starosta, StarostaDesc)
+PlayerClassDescEntry(Warmaster, WarmasterPlayerDesc)
+
+PlayerClassDescEntry(Woodsman, WoodsmanPlayerDesc)
+PlayerClassDescEntry(Varangian, VarangianPlayerDesc)
+PlayerClassDescEntry(Pirate, PiratePlayerDesc)
+PlayerClassDescEntry(Berserker, BerserkerPlayerDesc)
+PlayerClassDescEntry(Raider, RaiderDesc)
+PlayerClassDescEntry(Ravager, RavagerPlayerDesc)
+
+PlayerClassDescEntry(SwordArmor, SwordArmorPlayerDesc)
+*/
+
+
+#include "PlayerClassDescs.lyn.event"
