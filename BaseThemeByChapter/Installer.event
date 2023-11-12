@@ -1,0 +1,10 @@
+#define ChaptersWithBaseThemeEntry(chapter, theme) "PUSH; ORG ChaptersWithBaseThemeList+(chapter*2); SHORT theme; POP"
+
+ALIGN 4
+ChaptersWithBaseThemeList:
+FILL 0xFF*2
+
+// Example macro usage
+// ChaptersWithBaseThemeEntry(0x0, TreasureTownID)
+
+#include "ChaptersWithBaseTheme.lyn.event"
