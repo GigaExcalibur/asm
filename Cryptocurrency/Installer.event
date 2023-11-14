@@ -1,0 +1,22 @@
+#define ModifierPerChapterEntry(chapter, modifier) "PUSH; ORG ModifierPerChapterList+chapter; BYTE modifier; POP"
+
+ALIGN 4
+CryptocurrencyItem_Link:
+BYTE RedGem // Change to the item id of your crypto junk
+
+ALIGN 4
+VarianceMinimum_Link:
+BYTE 80 // Change to the minimum % you want variance to be
+
+ALIGN 4
+VarianceMaximum_Link:
+BYTE 120 // Change to the maximum % you want variance to be (maximum 255)
+
+ALIGN 4
+ModifierPerChapterList:
+FILL 256
+
+// Example macro usage, make sure to multiply your base price modifier by 10 here to support intervals of 0.1
+ModifierPerChapterEntry(0x0, 5) // In the Prologue, Red Gems are worth 5/10 = 1/2 as much as normal.
+
+#include "Cryptocurrency.lyn.event"
