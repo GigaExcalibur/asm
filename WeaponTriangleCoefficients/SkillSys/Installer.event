@@ -1,0 +1,36 @@
+ALIGN 4
+IgnoreTriangleList:
+BYTE IronSword
+BYTE 0 // Terminator
+
+// In order to support ratios of up to 1/12, make sure you multiply your Weapon Triangle coefficient by 12 in each byte
+// Also supports negative values, can go up to +/- 127 (make sure to surround the negative in parentheses)
+
+// Easy mode
+ALIGN 4
+EasyWTHitCoefficient:
+BYTE (-12)
+
+ALIGN 4
+EasyWTMtCoefficient:
+BYTE (-12)
+
+// Normal mode
+ALIGN 4
+NormalWTHitCoefficient:
+BYTE 12
+
+ALIGN 4
+NormalWTMtCoefficient:
+BYTE 12
+
+// Hard mode
+ALIGN 4
+HardWTHitCoefficient:
+BYTE 0
+
+ALIGN 4
+HardWTMtCoefficient:
+BYTE 0
+
+#include "WeaponTriangleStuff.lyn.event"
