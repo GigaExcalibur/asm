@@ -1,0 +1,9 @@
+#define IncreaseWeaponLevel(unit, type, restriction) "SVAL s1 unit; SVAL s2 type; SVAL s3 restriction; ASMC IncreaseWLvl|1"
+
+/* Parameters:
+s1 - unit to increase weapon rank for
+s2 - weapon type to increase weapon rank of
+s3 - whether unit should be increased to E rank if they have no rank in given weapon type (0 or nonzero for no and yes)
+*/
+
+#include "IncreaseWLvl.lyn.event"
