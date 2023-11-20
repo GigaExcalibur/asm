@@ -1,7 +1,7 @@
 #define IncreaseWeaponLevel(unit, type, restriction) "SVAL s1 unit; SVAL s2 type; SVAL s3 restriction; ASMC IncreaseWLvl|1"
 
 /* Parameters:
-s1 - unit to increase weapon rank for
+s1 - unit to increase weapon rank for (0 for player leader unit, -1 for active unit, -2 for reading coords from sB)
 s2 - weapon type to increase weapon rank of
 s3 - whether unit should be increased to E rank if they have no rank in given weapon type (0 or nonzero for no and yes)
 */
