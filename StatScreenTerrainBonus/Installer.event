@@ -1,0 +1,3 @@
+#include "StatScreenTerrainBonus.lyn.event"
+
+// add `POIN TerrainDefenseBoost` to the defense stat getter and `POIN TerrainResistanceBoost` to the res stat getter
