@@ -1,0 +1,9 @@
+#include "FixedDamageWeapons.lyn.event"
+
+ALIGN 4
+FixedDamageWeaponsList:
+FILL 0xFF
+
+#define FixedDamageWeaponsEntry(item, damage) "PUSH; ORG FixedDamageWeaponsList+item; BYTE damage; POP"
+
+FixedDamageWeaponsEntry(IronSword, 1)
