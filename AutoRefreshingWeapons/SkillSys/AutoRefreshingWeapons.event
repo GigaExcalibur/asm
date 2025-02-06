@@ -1,0 +1,31 @@
+#define ItemNameWidth 0x08
+
+// Number of tiles for inventory slot item names
+PUSH
+ORG 0xA00778
+BYTE ItemNameWidth
+ORG 0xA00780
+BYTE ItemNameWidth
+ORG 0xA00788
+BYTE ItemNameWidth
+ORG 0xA00790
+BYTE ItemNameWidth
+ORG 0xA00798
+BYTE ItemNameWidth
+POP
+
+// change if altering convoy size
+#define MaxConvoy 100
+
+ALIGN 4
+ConvoySize_Link:
+WORD MaxConvoy
+
+ALIGN 4
+RefreshingDurabilityList:
+BYTE 0x09 // vanilla rapier
+BYTE 0x17 // vanilla silver lance
+BYTE 0x6C // vanilla vulnerary
+BYTE 0 // terminator
+
+#include "AutoRefreshingWeapons.lyn.event"
