@@ -1,8 +1,10 @@
 #include "gbafe.h"
 
 extern u8 RefreshingDurabilityList[];
+extern u8 BrokenWeaponTable[8][4];
+extern bool EQUIP_BROKEN_WEAPONS_Link;
+extern bool EQUIP_BROKEN_MAGIC_Link;
 extern u8 ConvoySize_Link;
-
 
 // hoo boy
 bool DoesItemRefreshDurability(int item) {
@@ -38,26 +40,73 @@ u16 GetItemAfterUse(int item) {
     return item; // return used item
 }
 
-s8 CanUnitUseWeaponNow(struct Unit* unit, int item) {
-    if (item == 0) {
-        return FALSE;
+bool IsBrokenWeaponEquippable(int item) {
+	if(EQUIP_BROKEN_WEAPONS_Link) {
+		if(GetItemType(item) <= 3 || EQUIP_BROKEN_MAGIC_Link) {
+			return true;
+		}
 	}
-    if (!(GetItemAttributes(item) & IA_WEAPON)) {
+	return false;
+}
+
+s8 CanUnitUseWeapon(struct Unit* unit, int item) {
+    if (item == 0)
         return FALSE;
-	}
-	if (GetItemUses(item) <= 0) {
+
+    if (!(GetItemAttributes(item) & IA_WEAPON))
+        return FALSE;
+	
+	if (!(GetItemUses(item) > 0 || IsBrokenWeaponEquippable(item))) {
 		return FALSE;
 	}
 
-    if ((GetItemAttributes(item) & IA_MAGIC) && IsUnitMagicSealed(unit)) {
-        return FALSE;
-	}
-    return CanUnitUseWeapon(unit, item);
-}
+    if (GetItemAttributes(item) & IA_LOCK_ANY) {
+        // Check for item locks
 
+        if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_5) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_5))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_6) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_6))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_7) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_7))
+            return FALSE;
+
+        if ((GetItemAttributes(item) & IA_LOCK_2) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_2))
+            return FALSE;
+
+        // Monster lock is special
+        if (GetItemAttributes(item) & IA_LOCK_3) {
+            if (!(UNIT_CATTRIBUTES(unit) & CA_LOCK_3))
+                return FALSE;
+
+            return TRUE;
+        }
+
+        if (GetItemAttributes(item) & IA_UNUSABLE)
+            if (!(IsItemUnsealedForUnit(unit, item)))
+                return FALSE;
+    }
+
+    if ((unit->statusIndex == UNIT_STATUS_SILENCED) && (GetItemAttributes(item) & IA_MAGIC))
+        return FALSE;
+
+    {
+        int wRank = GetItemRequiredExp(item);
+        int uRank = (unit->ranks[GetItemType(item)]);
+
+        return (uRank >= wRank) ? TRUE : FALSE;
+    }
+}
 s8 CanUnitUseItem(struct Unit* unit, int item)
 {
-	if (GetItemUses(item) <= 0) {
+	if (!(GetItemUses(item) > 0 || IsBrokenWeaponEquippable(item))) {
 		return FALSE;
 	}
 	
@@ -210,12 +259,19 @@ void RefreshItemsASMC(struct Proc* proc) {
 	int unitID = 1;
 	int maxCount = 62;
 	
+	int restoration = gEventSlots[0x1];
+	
 	while(unitID < maxCount) {
 		struct Unit* curUnit = GetUnit(unitID);
 		for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
 			u16 curItem = curUnit->items[j];
 			if(DoesItemRefreshDurability(curItem)) {
-				curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+				if(restoration == 0 || GetItemUses(curItem) + restoration > GetItemMaxUses(curItem)) {
+					curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+				}
+				else {
+					curUnit->items[j] += (restoration << 8);
+				}
 			}
 		}
 		unitID++;
@@ -224,10 +280,43 @@ void RefreshItemsASMC(struct Proc* proc) {
 	u16 * convoy = GetConvoyItemArray();
 	for(int i = 0; ((i < ConvoySize_Link) && (*convoy)); i++) {
 		if(DoesItemRefreshDurability(GetItemIndex(*convoy))) {
-			*convoy = MakeNewItem(GetItemIndex(*convoy));
+			if(restoration == 0 || GetItemUses(*convoy) + restoration > GetItemMaxUses(*convoy)) {
+				*convoy = MakeNewItem(GetItemIndex(*convoy));
+			}
+			else {
+				*convoy += (restoration << 8);
+			}
 		}
 		*convoy++;
 	}
+}
+
+int GetItemMight(int item) {
+	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
+		return BrokenWeaponTable[GetItemType(item)][0];
+	}
+    return GetItemData(ITEM_INDEX(item))->might;
+}
+
+int GetItemHit(int item) {
+	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
+		return BrokenWeaponTable[GetItemType(item)][1];
+	}
+    return GetItemData(ITEM_INDEX(item))->hit;
+}
+
+int GetItemWeight(int item) {
+	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
+		return BrokenWeaponTable[GetItemType(item)][2];
+	}
+    return GetItemData(ITEM_INDEX(item))->weight;
+}
+
+int GetItemCrit(int item) {
+	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
+		return BrokenWeaponTable[GetItemType(item)][3];
+	}
+    return GetItemData(ITEM_INDEX(item))->crit;
 }
 
 // let's fucking do this baby
@@ -517,4 +606,3 @@ void sub_809D300(struct Text * textBase, u16 * tm, int yLines, struct Unit * uni
 
     return;
 }
-
