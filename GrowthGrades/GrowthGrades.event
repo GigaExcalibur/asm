@@ -1,0 +1,181 @@
+/* READ THIS
+
+This hack will not work unless you edit MSS to replace the old growth drawing functions:
+
+1. Go to EngineHacks/Necessary/MSS/pages. If using the strength/magic split, go to the strmag folder.
+2. Open mss_defs.s at your folder location and scroll down to the draw_growth_at macro.
+3. Replace the macro with the one written below.
+
+.macro draw_growth_at, bar_x, bar_y, list
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  
+  mov	  r1, \bar_x
+  mov 	  r2, \bar_y
+  mov	  r3, \list
+  
+  blh	  DrawGrowthGrade
+.endm
+
+4. Open the mss page 1 .s that you're using and scroll down to the ShowGrowths label.
+5. Replace the contents of the label with the one written below. The position numbers will differ depending on whether you're using the str/mag split - the contents below assume the stats are split.
+
+ShowGrowths:
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#4]		@str growth getter
+draw_growth_at #17, #3, #0
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#8]		@mag growth getter
+draw_growth_at #17, #5, #1
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#12]		@skl growth getter
+draw_growth_at #17, #7, #2
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#16]		@spd growth getter
+draw_growth_at #17, #9, #3
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#20]		@luk growth getter
+draw_growth_at #17, #11, #4
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#24]		@def growth getter
+draw_growth_at #17, #13, #5
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0,#28]		@res growth getter
+draw_growth_at #17, #15, #6
+draw_textID_at 13, 17, textID=0x4E9, growth_func=1 @hp name
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
+draw_growth_at #17, #17, #7
+b		NextColumn
+.ltorg
+
+6. Save and assemble the edited mss page 1 file.
+7. Edit the lists below to customize your own thresholds!
+*/
+
+// special ui table entries
+#define Grade_S 	0x18
+#define Grade_A 	0x19
+#define Grade_B 	0x1A
+#define Grade_C 	0x1B
+#define Grade_D 	0x1C
+#define Grade_E 	0x1D
+
+#define NoSign		0xFF
+#define MinusSign	0x14
+#define PlusSign	0x15
+
+ALIGN 4
+StrengthGrowthGradeList:
+BYTE 25		Grade_D		NoSign
+BYTE 30		Grade_D		PlusSign
+BYTE 35		Grade_C		NoSign
+BYTE 40		Grade_C		PlusSign
+BYTE 45		Grade_B		NoSign
+BYTE 50		Grade_B		PlusSign
+BYTE 55		Grade_A		NoSign
+BYTE 60		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+MagicGrowthGradeList:
+BYTE 25		Grade_D		NoSign
+BYTE 30		Grade_D		PlusSign
+BYTE 35		Grade_C		NoSign
+BYTE 40		Grade_C		PlusSign
+BYTE 45		Grade_B		NoSign
+BYTE 50		Grade_B		PlusSign
+BYTE 55		Grade_A		NoSign
+BYTE 60		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+SkillGrowthGradeList:
+BYTE 25		Grade_D		NoSign
+BYTE 30		Grade_D		PlusSign
+BYTE 35		Grade_C		NoSign
+BYTE 40		Grade_C		PlusSign
+BYTE 45		Grade_B		NoSign
+BYTE 50		Grade_B		PlusSign
+BYTE 55		Grade_A		NoSign
+BYTE 60		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+SpeedGrowthGradeList:
+BYTE 25		Grade_D		NoSign
+BYTE 30		Grade_D		PlusSign
+BYTE 35		Grade_C		NoSign
+BYTE 40		Grade_C		PlusSign
+BYTE 45		Grade_B		NoSign
+BYTE 50		Grade_B		PlusSign
+BYTE 55		Grade_A		NoSign
+BYTE 60		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+LuckGrowthGradeList:
+BYTE 25		Grade_D		NoSign
+BYTE 30		Grade_D		PlusSign
+BYTE 35		Grade_C		NoSign
+BYTE 40		Grade_C		PlusSign
+BYTE 45		Grade_B		NoSign
+BYTE 50		Grade_B		PlusSign
+BYTE 55		Grade_A		NoSign
+BYTE 60		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+DefenseGrowthGradeList:
+BYTE 15		Grade_D		NoSign
+BYTE 20		Grade_D		PlusSign
+BYTE 25		Grade_C		NoSign
+BYTE 30		Grade_C		PlusSign
+BYTE 35		Grade_B		NoSign
+BYTE 40		Grade_B		PlusSign
+BYTE 45		Grade_A		NoSign
+BYTE 50		Grade_A		PlusSign		
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+ResistanceGrowthGradeList:
+BYTE 15		Grade_D		NoSign
+BYTE 20		Grade_D		PlusSign
+BYTE 25		Grade_C		NoSign
+BYTE 30		Grade_C		PlusSign
+BYTE 35		Grade_B		NoSign
+BYTE 40		Grade_B		PlusSign
+BYTE 45		Grade_A		NoSign
+BYTE 50		Grade_A		PlusSign		
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		PlusSign
+
+ALIGN 4
+HPGrowthGradeList:
+BYTE 50		Grade_D		NoSign
+BYTE 55		Grade_D		PlusSign
+BYTE 60		Grade_C		NoSign
+BYTE 65		Grade_C		PlusSign
+BYTE 70		Grade_B		NoSign
+BYTE 75		Grade_B		PlusSign
+BYTE 80		Grade_A		NoSign
+BYTE 85		Grade_A		PlusSign
+BYTE 254	Grade_S		NoSign
+// "terminator" since growths can't exceed 255
+BYTE 255 	Grade_S		MinusSign
+
+#include "GrowthGrades.lyn.event"
