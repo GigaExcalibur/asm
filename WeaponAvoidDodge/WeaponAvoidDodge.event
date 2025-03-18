@@ -21,7 +21,7 @@ WeaponAvoid(IronLance, Negative(10))
 WeaponDodge(IronLance, Negative(20))
 
 WeaponAvoid(IronAxe, Negative(5))
-WeaponDodge(IronAxe, 5)
+WeaponDodge(IronAxe, Negative(10))
 
 // for this code to work you must have text ids named AvoName and DodName
 // copy into text installer if needed

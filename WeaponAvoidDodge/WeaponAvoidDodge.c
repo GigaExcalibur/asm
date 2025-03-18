@@ -33,13 +33,17 @@ void ApplyHelpBoxContentSize(struct HelpBoxProc* proc, int width, int height)
     {
 
     case 1: // weapon
-        if (width < 0xC8)
-            width = 0xC8;
-
+		if (width < 0x90)
+			width = 0x90;
+		
         if (GetStringTextLen(GetStringFromIndex(proc->mid)) > 8)
             height += 0x20;
         else
             height += 0x10;
+		
+		if(GetItemAvoid(proc->item) != 0 || GetItemDodge(proc->item) != 0) {
+			width = 0xC8;
+		}
 
         break;
     
@@ -69,12 +73,17 @@ int DrawHelpBoxWeaponLabels(int item)
     Text_InsertDrawString(&gHelpBoxSt.text[0], 0, 8, GetWeaponTypeDisplayString(GetItemType(item)));
     Text_InsertDrawString(&gHelpBoxSt.text[0], 41, 8, GetStringFromIndex(0x500)); // TODO: msg id "Rng[.]"
     Text_InsertDrawString(&gHelpBoxSt.text[0], 93, 8, GetStringFromIndex(0x502)); // TODO: msg id "Wt"
-	Text_InsertDrawString(&gHelpBoxSt.text[0], 141, 8, GetStringFromIndex(AvoName_Link));
+
 
     Text_InsertDrawString(&gHelpBoxSt.text[1], 0, 8, GetStringFromIndex(0x503)); // TODO: msg id "Mt"
     Text_InsertDrawString(&gHelpBoxSt.text[1], 41, 8, GetStringFromIndex(0x4F4)); // TODO: msg id "Hit[.]}"
     Text_InsertDrawString(&gHelpBoxSt.text[1], 93, 8, GetStringFromIndex(0x501)); // TODO: msg id "Crit"
-	Text_InsertDrawString(&gHelpBoxSt.text[1], 141, 8, GetStringFromIndex(DodName_Link));
+	
+	if(GetItemAvoid(item) != 0 || GetItemDodge(item) != 0) {
+		Text_InsertDrawString(&gHelpBoxSt.text[0], 141, 8, GetStringFromIndex(AvoName_Link));
+		Text_InsertDrawString(&gHelpBoxSt.text[1], 141, 8, GetStringFromIndex(DodName_Link));		
+	}
+
 
     return 2;
 }
@@ -85,32 +94,37 @@ void DrawHelpBoxWeaponStats(int item)
     Text_InsertDrawString(&gHelpBoxSt.text[0], 30, 7, GetItemDisplayRankString(item));
     Text_InsertDrawString(&gHelpBoxSt.text[0], 61, 7, GetItemDisplayRangeString(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 125, 7, GetItemWeight(item));
-	if(GetItemAvoid(item) < 0) {
-		if(GetItemAvoid(item) <= -10) {
-			Text_InsertDrawString(&gHelpBoxSt.text[0], 162, 7, GetStringFromIndex(0x053A));
-		}
-		else {
-			Text_InsertDrawString(&gHelpBoxSt.text[0], 170, 7, GetStringFromIndex(0x053A));
-		}
-		Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 175, 7, -1 * GetItemAvoid(item));
-	}
-	else {
-		Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 175, 7, GetItemAvoid(item));
-	}
 
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 26, 7, GetItemMight(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 73, 7, GetItemHit(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 125, 7, GetItemCrit(item));
-	if(GetItemDodge(item) < 0) {
-		if(GetItemDodge(item) <= -10) {
-			Text_InsertDrawString(&gHelpBoxSt.text[1], 162, 7, GetStringFromIndex(0x053A));
+	
+	if(GetItemAvoid(item) != 0 || GetItemDodge(item) != 0) {
+		if(GetItemAvoid(item) < 0) {
+			if(GetItemAvoid(item) <= -10) {
+				Text_InsertDrawString(&gHelpBoxSt.text[0], 162, 7, GetStringFromIndex(0x053A));
+			}
+			else {
+				Text_InsertDrawString(&gHelpBoxSt.text[0], 170, 7, GetStringFromIndex(0x053A));
+			}
+			Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 175, 7, -1 * GetItemAvoid(item));
 		}
 		else {
-			Text_InsertDrawString(&gHelpBoxSt.text[1], 170, 7, GetStringFromIndex(0x053A));
+			Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 175, 7, GetItemAvoid(item));
 		}
-		Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 175, 7, -1 * GetItemDodge(item));
+
+		if(GetItemDodge(item) < 0) {
+			if(GetItemDodge(item) <= -10) {
+				Text_InsertDrawString(&gHelpBoxSt.text[1], 162, 7, GetStringFromIndex(0x053A));
+			}
+			else {
+				Text_InsertDrawString(&gHelpBoxSt.text[1], 170, 7, GetStringFromIndex(0x053A));
+			}
+			Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 175, 7, -1 * GetItemDodge(item));
+		}
+		else {
+			Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 175, 7, GetItemDodge(item));
+		}		
 	}
-	else {
-		Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 175, 7, GetItemDodge(item));
-	}
+
 }
