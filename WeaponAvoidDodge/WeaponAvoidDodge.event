@@ -1,0 +1,44 @@
+#define Negative(Number) "0x100 - Number"
+#define WeaponAvoid(id, avo) "PUSH; ORG WeaponAvoidTable+id; BYTE avo; POP"
+#define WeaponDodge(id, dod) "PUSH; ORG WeaponDodgeTable+id; BYTE dod; POP"
+
+ALIGN 4
+WeaponAvoidTable:
+FILL 255
+
+ALIGN 4
+WeaponDodgeTable:
+FILL 255
+
+// follow above macros to define weapon avoid and dodge
+// defaults to 0 if no other value is defined
+// supports values between -127 and 127 though any 3-digit number won't display properly
+
+WeaponAvoid(IronSword, 10)
+WeaponDodge(IronSword, 20)
+
+WeaponAvoid(IronLance, Negative(10))
+WeaponDodge(IronLance, Negative(20))
+
+WeaponAvoid(IronAxe, Negative(5))
+WeaponDodge(IronAxe, 5)
+
+// for this code to work you must have text ids named AvoName and DodName
+// copy into text installer if needed
+/*
+## AvoName
+Avo[X]
+
+## DodName
+Dod[X]
+*/
+
+ALIGN 4
+AvoName_Link:
+WORD AvoName
+
+ALIGN 4
+DodName_Link:
+WORD DodName
+
+#include "WeaponAvoidDodge.lyn.event"
