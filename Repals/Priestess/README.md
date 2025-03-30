@@ -17,4 +17,3 @@ Eirika-Style variant made by EA.
 Magic (Alt) animation by UltraxBlade and scripted by 7743.
 
 Javelin animation and script by Sirknite31.
-
