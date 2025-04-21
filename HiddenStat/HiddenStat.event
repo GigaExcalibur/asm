@@ -1,0 +1,9 @@
+#define HiddenStatEntry(unit, stat) "PUSH; ORG HiddenStatTable+unit; BYTE stat; POP"
+
+ALIGN 4
+HiddenStatTable:
+FILL 255
+
+HiddenStatEntry(Eirika, 40)
+
+#include "HiddenStat.lyn.event"
