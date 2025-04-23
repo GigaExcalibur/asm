@@ -1,0 +1,3 @@
+SoftWeaponRankTable=$B88570
+GetWeaponSoftRank=$B88671
+CanUnitUseWeapon=$B8868D
