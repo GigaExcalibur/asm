@@ -260,4 +260,4 @@ BYTE 0
 
 SoftWeaponRankEntry(0x91, 0x1) // audhulma can be used at E rank by those with the proper weapon lock
 
-#include "DSFEExcalibur.lyn.event"
+#include "SoftWeaponLocks.lyn.event"
