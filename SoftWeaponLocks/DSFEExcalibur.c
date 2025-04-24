@@ -13,10 +13,12 @@ s8 CanUnitUseWeapon(struct Unit* unit, int item) {
     if (!(GetItemAttributes(item) & IA_WEAPON))
         return FALSE;
 	
-    int wRank = GetWeaponSoftRank(item);
+	int wRank = GetItemRequiredExp(item);
 	
     if (GetItemAttributes(item) & IA_LOCK_ANY) {
         // Check for item locks
+		
+		wRank = GetWeaponSoftRank(item);
 
         if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1)) {
 			if(wRank == 0) {
