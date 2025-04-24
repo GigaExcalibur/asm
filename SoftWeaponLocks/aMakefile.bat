@@ -1,5 +1,5 @@
 @echo off
 
 
-make "DSFEExcalibur.lyn.event" 
+make "SoftWeaponLocks.lyn.event" 
 pause

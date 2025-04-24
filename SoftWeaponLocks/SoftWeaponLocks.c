@@ -7,11 +7,13 @@ u8 GetWeaponSoftRank(int item) {
 }
 
 s8 CanUnitUseWeapon(struct Unit* unit, int item) {
-    if (item == 0)
+    if (item == 0) {
         return FALSE;
+	}
 
-    if (!(GetItemAttributes(item) & IA_WEAPON))
+    if (!(GetItemAttributes(item) & IA_WEAPON)) {
         return FALSE;
+	}
 	
 	int wRank = GetItemRequiredExp(item);
 	
