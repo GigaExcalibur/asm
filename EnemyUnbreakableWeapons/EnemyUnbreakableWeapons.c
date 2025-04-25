@@ -1,5 +1,7 @@
 #include "gbafe.h"
 
+extern int GetItemDurabilityColor(int item);
+
 void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* defender) {
     attacker->wexpMultiplier++;
 
@@ -113,7 +115,7 @@ void DrawItemStatScreenLine(struct Text* text, int item, int nameColor, u16* map
     color = (nameColor == TEXT_COLOR_SYSTEM_GRAY) ? TEXT_COLOR_SYSTEM_GRAY : TEXT_COLOR_SYSTEM_WHITE;
     PutSpecialChar(mapOut + 12, color, TEXT_SPECIAL_SLASH);
 
-    color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? TEXT_COLOR_SYSTEM_BLUE : TEXT_COLOR_SYSTEM_GRAY;
+    color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? GetItemDurabilityColor(item) : TEXT_COLOR_SYSTEM_GRAY;
 	
 	if(UNIT_FACTION(gStatScreen.unit) == FACTION_RED) {
 		PutTwoSpecialChar(mapOut + 10, color, TEXT_SPECIAL_DASH, TEXT_SPECIAL_DASH);
