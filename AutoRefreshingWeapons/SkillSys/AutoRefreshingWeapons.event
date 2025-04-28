@@ -3,14 +3,11 @@
 #define FALSE 0
 
 // ASMC 
-#define AutoRefreshItems "ASMC RefreshItemsASMC|1"
-#define AutoRefreshItems(uses) "SVAL s1 uses; ASMC RefreshItemsASMC|1"
+#define EnactAutoRepair "ASMC RefreshItemsASMC|1"
+#define EnactAutoRepair(uses) "SVAL s1 uses; ASMC RefreshItemsASMC|1"
 
 // convoy size, change if expanding convoy
 #define MaxConvoy 100
-
-// item name width in stat screen
-#define ItemNameWidth 0x08
 
 // if true, weapons at 0 durability will have reduced stats and still be equippable.
 #define EQUIP_BROKEN_WEAPONS TRUE
@@ -34,26 +31,13 @@ BrokenWeaponEntry(0x11C, 0x11D, 0, 50, 20, 0, 0x12) // light
 BrokenWeaponEntry(0x11E, 0x11F, 0, 50, 20, 0, 0x12) // dark
 
 ALIGN 4
-RefreshingDurabilityList:
+AutoRefreshList:
 BYTE 0x09 // vanilla rapier
 BYTE 0x17 // vanilla silver lance
 BYTE 0x6C // vanilla vulnerary
 BYTE 0 // terminator
 
 // don't touch anything below here
-PUSH
-ORG 0xA00778
-BYTE ItemNameWidth
-ORG 0xA00780
-BYTE ItemNameWidth
-ORG 0xA00788
-BYTE ItemNameWidth
-ORG 0xA00790
-BYTE ItemNameWidth
-ORG 0xA00798
-BYTE ItemNameWidth
-POP
-
 ALIGN 4
 ConvoySize_Link:
 WORD MaxConvoy
@@ -67,3 +51,4 @@ EQUIP_BROKEN_MAGIC_Link:
 WORD EQUIP_BROKEN_MAGIC
 
 #include "AutoRefreshingWeapons.lyn.event"
+

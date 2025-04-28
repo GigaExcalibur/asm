@@ -1,6 +1,6 @@
 #include "gbafe.h"
 
-extern u8 RefreshingDurabilityList[];
+extern u8 AutoRefreshList[];
 extern u8 BrokenWeaponTable[8][4];
 extern bool EQUIP_BROKEN_WEAPONS_Link;
 extern bool EQUIP_BROKEN_MAGIC_Link;
@@ -9,8 +9,8 @@ extern u8 ConvoySize_Link;
 // hoo boy
 bool DoesItemRefreshDurability(int item) {
 	int i = 0;
-	while(RefreshingDurabilityList[i] != 0) {
-		if(RefreshingDurabilityList[i] == GetItemIndex(item)) {
+	while(AutoRefreshList[i] != 0) {
+		if(AutoRefreshList[i] == GetItemIndex(item)) {
 			return true;
 		}
 		i++;
@@ -50,6 +50,50 @@ bool IsBrokenWeaponEquippable(int item) {
 		}
 	}
 	return false;
+}
+
+int GetItemAttributes(int item) {
+    u32 abilities = GetItemData(ITEM_INDEX(item))->attributes;
+	if(!(abilities & IA_UNBREAKABLE)) {
+		if(GetItemUses(item) == 0) {
+			if(!(EQUIP_BROKEN_WEAPONS_Link)) {
+				if(!(EQUIP_BROKEN_MAGIC_Link)) {
+					if(!(abilities & (IA_MAGIC|IA_MAGICDAMAGE))) {
+						abilities |= IA_UNUSABLE;
+					}
+				}
+			}
+		}
+	}
+	return abilities;
+}
+
+s8 CanUnitUseStaff(struct Unit* unit, int item) {
+    if (item == 0)
+        return FALSE;
+
+    if (!(GetItemAttributes(item) & IA_STAFF))
+        return FALSE;
+	
+	if (GetItemUses(item) == 0) {
+		return FALSE;
+	}
+
+    if (unit->statusIndex == UNIT_STATUS_SLEEP)
+        return FALSE;
+
+    if (unit->statusIndex == UNIT_STATUS_BERSERK)
+        return FALSE;
+
+    if (unit->statusIndex == UNIT_STATUS_SILENCED)
+        return FALSE;
+
+    {
+        int wRank = GetItemRequiredExp(item);
+        int uRank = unit->ranks[GetItemType(item)];
+
+        return (uRank >= wRank) ? TRUE : FALSE;
+    }
 }
 
 // goes in the weapon usability calc loop
