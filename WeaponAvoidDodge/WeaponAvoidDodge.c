@@ -25,6 +25,21 @@ void AddWeaponAvoidDodge(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 		bunitA->battleDodgeRate = 0;
 }
 
+/*
+void ComputeBattleUnitAvoidRate(struct BattleUnit* bu) {
+    bu->battleAvoidRate = (bu->battleSpeed * 2) + bu->terrainAvoid + (bu->unit.lck) + GetItemAvoid(bu->weapon);
+
+    if (bu->battleAvoidRate < 0)
+        bu->battleAvoidRate = 0;
+}
+
+void NewComputeBattleUnitDodgeRate(struct BattleUnit* bu) {
+    bu->battleDodgeRate = bu->unit.lck + GetItemDodge(bu->weapon);
+	
+	if (bu->battleDodgeRate < 0)
+		bu->battleDodgeRate = 0;
+}
+*/
 void ApplyHelpBoxContentSize(struct HelpBoxProc* proc, int width, int height)
 {
     width = 0xF0 & (width + 15); // align to 16 pixel multiple
@@ -95,7 +110,7 @@ void DrawHelpBoxWeaponStats(int item)
     Text_InsertDrawString(&gHelpBoxSt.text[0], 67, 7, GetItemDisplayRangeString(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 131, 7, GetItemWeight(item));
 
-    Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 26, 7, GetItemMight(item));
+    Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 30, 7, GetItemMight(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 79, 7, GetItemHit(item));
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[1], 131, 7, GetItemCrit(item));
 	

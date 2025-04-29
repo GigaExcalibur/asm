@@ -1,5 +1,5 @@
 @echo off
 
 
-make "WeaponAvoidDodge.lyn.event" 
+make "WeaponAvoidDodge.lyn.event"
 pause
