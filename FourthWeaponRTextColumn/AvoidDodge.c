@@ -14,12 +14,12 @@ s8 GetItemDodge(int item) {
 }
 
 void AddWeaponAvoidDodge(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
-	bunitA->battleAvoidRate += GetItemAvoid(bunitA->weapon);
+	bunitA->battleAvoidRate += GetItemAvoid(bunitA->weaponBefore);
 	
 	if(bunitA->battleAvoidRate < 0)
 		bunitA->battleAvoidRate = 0;
 	
-	bunitA->battleDodgeRate += GetItemDodge(bunitA->weapon);
+	bunitA->battleDodgeRate += GetItemDodge(bunitA->weaponBefore);
 	
 	if(bunitA->battleDodgeRate < 0)
 		bunitA->battleDodgeRate = 0;
@@ -27,14 +27,14 @@ void AddWeaponAvoidDodge(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 
 /*
 void ComputeBattleUnitAvoidRate(struct BattleUnit* bu) {
-    bu->battleAvoidRate = (bu->battleSpeed * 2) + bu->terrainAvoid + (bu->unit.lck) + GetItemAvoid(bu->weapon);
+    bu->battleAvoidRate = (bu->battleSpeed * 2) + bu->terrainAvoid + (bu->unit.lck) + GetItemAvoid(bu->weaponBefore);
 
     if (bu->battleAvoidRate < 0)
         bu->battleAvoidRate = 0;
 }
 
 void NewComputeBattleUnitDodgeRate(struct BattleUnit* bu) {
-    bu->battleDodgeRate = bu->unit.lck + GetItemDodge(bu->weapon);
+    bu->battleDodgeRate = bu->unit.lck + GetItemDodge(bu->weaponBefore);
 	
 	if (bu->battleDodgeRate < 0)
 		bu->battleDodgeRate = 0;
