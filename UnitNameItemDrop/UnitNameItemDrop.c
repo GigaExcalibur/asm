@@ -97,7 +97,7 @@ void NewPopup_GoldGot(ProcPtr parent, struct Unit *unit, int value)
         SetPartyGoldAmount(value);
         NewPopup_Simple(NewGoldGotPopup, 0x60, 0x0, parent);
     } else
-        NewPopup_Simple(PopupScr_GoldWasStole, 0x60, 0x0, parent);
+        NewPopup_Simple(NewGoldStolenPopup, 0x60, 0x0, parent);
 }
 
 void NewPopup_ItemStealing(u16 item, ProcPtr parent)
