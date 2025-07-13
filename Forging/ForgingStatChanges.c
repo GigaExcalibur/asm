@@ -106,6 +106,10 @@ void IncrementForgeCount(int item) {
   int val = GetItemForgeCount(item);
   SetItemForgeCount(item, val + 1);
 }
+void DecrementForgeCount(int item) {
+  int val = GetItemForgeCount(item);
+  SetItemForgeCount(item, val - 1);
+}
 
 int GetItemForgeCost(int item) {
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];

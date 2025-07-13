@@ -3,6 +3,7 @@
 int GetForgedItemDurability(int id); 
 int InitFreeForgedItemSlot(int item); 
 void IncrementForgeCount(int item); 
+void DecrementForgeCount(int item); 
 int CanItemBeForged(int item); 
 enum { LINES_MAX = 5 };
 

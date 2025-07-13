@@ -83,7 +83,18 @@ int ForgeMenuSwitchIn(struct MenuProc *menu, struct MenuItemProc *menuItem) {
                  TEXT_COLOR_SYSTEM_WHITE, TEXT_SPECIAL_DASH);
 
   if (limits.maxCount && (GetItemForgeCount(item) < limits.maxCount)) {
-    int forgedItem = item + (1 << 8);
+    int forgedItem = item;
+
+    int forgeSlot = ITEM_USES(item);
+    if (!forgeSlot) {
+      forgeSlot = InitFreeForgedItemSlot(item);
+    }
+    if (forgeSlot >= 0) { // ensure we found a valid forge ID
+      forgedItem = GetItemIndex(forgedItem) |
+                   forgeSlot << 8;     // ensure the forge slot is set
+      IncrementForgeCount(forgedItem); // to show preview
+    }
+
     Text_InsertDrawNumberOrBlank(&texts[0], 0x32, TEXT_COLOR_SYSTEM_BLUE,
                                  GetItemMight(forgedItem));
     Text_InsertDrawNumberOrBlank(&texts[1], 0x42, TEXT_COLOR_SYSTEM_BLUE,
@@ -92,6 +103,9 @@ int ForgeMenuSwitchIn(struct MenuProc *menu, struct MenuItemProc *menuItem) {
                                  GetItemWeight(forgedItem));
     Text_InsertDrawNumberOrBlank(&texts[3], 0x42, TEXT_COLOR_SYSTEM_BLUE,
                                  GetItemCrit(forgedItem));
+    if (forgeSlot >= 0) {
+      DecrementForgeCount(forgedItem); // revert
+    }
   }
   return 0;
 }
