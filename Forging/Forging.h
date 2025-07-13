@@ -1,8 +1,9 @@
 #include "gbafe.h"
 
 int GetForgedItemDurability(int id); 
-int GetFreeForgedItemSlot(void); 
+int InitFreeForgedItemSlot(int item); 
 void IncrementForgeCount(int item); 
+int CanItemBeForged(int item); 
 enum { LINES_MAX = 5 };
 
 struct UnitInfoWindowProc {

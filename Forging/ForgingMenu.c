@@ -164,8 +164,7 @@ u8 ForgeMenuOnSelect(struct MenuProc *menu, struct MenuItemProc *menuItem) {
   if (IsItemForgeable(item)) {
     int forgeSlot = ITEM_USES(item);
     if (!forgeSlot) {
-      forgeSlot = GetFreeForgedItemSlot();
-      SetForgedItemDefaultUse(item);
+      forgeSlot = InitFreeForgedItemSlot(item);
     }
     if (forgeSlot >= 0) { // ensure we found a valid forge ID
       item = GetItemIndex(item) | forgeSlot

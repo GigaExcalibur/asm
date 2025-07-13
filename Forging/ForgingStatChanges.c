@@ -55,7 +55,12 @@ void SetForgedItemDurability(int item, u8 value) {
     ForgedItemDurability[byteIndex + 1] = (data >> 8) & 0xFF;
 }
 int SetForgedItemAfterUse(int item) {
-  int uses = GetForgedItemDurability(item) - 1;
+  int uses = GetForgedItemDurability(item);
+  if (!(gBattleStats.config & BATTLE_CONFIG_REAL)) {
+    return uses;
+  }
+
+  uses -= 1;
 
   SetForgedItemDurability(item, uses);
   return uses;
@@ -64,14 +69,23 @@ void SetForgedItemDefaultUse(int item) {
   SetForgedItemDurability(item, GetItemMaxUses(item));
 }
 
-int GetFreeForgedItemSlot(void) {
+int InitFreeForgedItemSlot(int item) {
   for (int i = 0; i < NumOfForgables; ++i) {
     if (!GetForgedItemDurability(
             i << 8)) { // if no durability, the item does not exist
-      return i + 1;    // slot 0 would be 0 durability, so skip
+      SetForgedItemDefaultUse(item | (i + i) << 8);
+      return i + 1; // slot 0 would be 0 durability, so skip
     }
   }
   return -1;
+}
+
+int CanItemBeForged(int item) { // can it be forged at all
+  struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
+  if (limits.maxCount == 0) {
+    return false;
+  }
+  return true;
 }
 
 int GetItemForgeCount(int item) {
@@ -102,7 +116,7 @@ int GetItemForgeCost(int item) {
   return (count + 1) * limits.baseCost;
 }
 
-bool IsItemForgeable(int item) {
+bool IsItemForgeable(int item) { // do we have the cash
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   int count = GetItemForgeCount(item);
 
@@ -190,6 +204,8 @@ int MakeNewItem(int item) {
 
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount) {
+
+    InitFreeForgedItemSlot(item);
     uses = 0;
   }
 
