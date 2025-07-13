@@ -162,9 +162,21 @@ u8 ForgeMenuOnSelect(struct MenuProc *menu, struct MenuItemProc *menuItem) {
   int item = gActiveUnit->items[menuItem->itemNumber];
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (IsItemForgeable(item)) {
-    gActiveUnit->items[menuItem->itemNumber] += (1 << 8);
-    gPlaySt.partyGoldAmount -= GetItemForgeCost(item);
-    return MENU_ACT_CLEAR | MENU_ACT_SND6A | MENU_ACT_END | MENU_ACT_SKIPCURSOR;
+    int forgeSlot = ITEM_USES(item);
+    if (!forgeSlot) {
+      forgeSlot = GetFreeForgedItemSlot();
+      SetForgedItemDefaultUse(item);
+    }
+    if (forgeSlot >= 0) { // ensure we found a valid forge ID
+      item = GetItemIndex(item) | forgeSlot
+                                      << 8; // ensure the forge slot is set
+      gActiveUnit->items[menuItem->itemNumber] = item;
+
+      gPlaySt.partyGoldAmount -= GetItemForgeCost(item);
+      IncrementForgeCount(item);
+      return MENU_ACT_CLEAR | MENU_ACT_SND6A | MENU_ACT_END |
+             MENU_ACT_SKIPCURSOR;
+    }
   }
 
   if (limits.maxCount == 0) {
