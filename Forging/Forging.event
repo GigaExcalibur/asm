@@ -1,3 +1,6 @@
+
+#include "EAstdlib.event" 
+
 #define ForgeBonus(mt, hit, crit, wt) "BYTE mt hit crit wt"
 #define ForgeLimit(item, index, max, cost) "PUSH; ORG gForgeLimits + (item * 4); BYTE index max; SHORT cost; POP"
 #define Negative(num) "0x100 - num"
