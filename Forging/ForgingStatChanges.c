@@ -4,8 +4,14 @@
 #define BitsPerDurability 6
 #define TotalDurabilityBits (NumOfForgables * BitsPerDurability) // 378
 #define DurabilityStorageBytes ((TotalDurabilityBits + 7) / 8)
-extern u8 ForgedItemDurability[DurabilityStorageBytes]; // 48
-extern u8 ForgedItemCount[NumOfForgables];
+extern u8 *gForgedItemDurability; //[DurabilityStorageBytes]; // 48
+extern u8 *gForgedItemCount;      //[NumOfForgables];
+
+// in vanilla, GameSavePackedUnit / SuspendSavePackedUnit don't save the 0x80
+// durability bit but if it did, it could be used to determine whether it's
+// forged or not. if not forged, then it could use durability in the regular way
+// #define FORGED_ITEM 0x8000
+// #define ITEM_FORGE_ID(id) "(id >> 8)& 0x3F"
 
 int GetForgedItemDurability(int item) {
   if (GetItemAttributes(item) & IA_UNBREAKABLE)
@@ -20,9 +26,9 @@ int GetForgedItemDurability(int item) {
   int bitOffset = bitPos % 8;
 
   // Read two bytes to ensure we have enough bits
-  u16 data = ForgedItemDurability[byteIndex];
+  u16 data = gForgedItemDurability[byteIndex];
   if (byteIndex + 1 < DurabilityStorageBytes)
-    data |= ForgedItemDurability[byteIndex + 1] << 8;
+    data |= gForgedItemDurability[byteIndex + 1] << 8;
 
   return (data >> bitOffset) & 0x3F; // Mask to 6 bits
 }
@@ -39,9 +45,9 @@ void SetForgedItemDurability(int item, u8 value) {
   int bitOffset = bitPos % 8;
 
   // Read two bytes
-  u16 data = ForgedItemDurability[byteIndex];
+  u16 data = gForgedItemDurability[byteIndex];
   if (byteIndex + 1 < DurabilityStorageBytes)
-    data |= ForgedItemDurability[byteIndex + 1] << 8;
+    data |= gForgedItemDurability[byteIndex + 1] << 8;
 
   // Clear the 6-bit field
   data &= ~(0x3F << bitOffset);
@@ -50,9 +56,9 @@ void SetForgedItemDurability(int item, u8 value) {
   data |= value << bitOffset;
 
   // Write back
-  ForgedItemDurability[byteIndex] = data & 0xFF;
+  gForgedItemDurability[byteIndex] = data & 0xFF;
   if (byteIndex + 1 < DurabilityStorageBytes)
-    ForgedItemDurability[byteIndex + 1] = (data >> 8) & 0xFF;
+    gForgedItemDurability[byteIndex + 1] = (data >> 8) & 0xFF;
 }
 int SetForgedItemAfterUse(int item) {
   int uses = GetForgedItemDurability(item);
@@ -93,14 +99,14 @@ int GetItemForgeCount(int item) {
   if (limits.maxCount == 0) {
     return 0;
   }
-  return ForgedItemCount[ITEM_USES(item)];
+  return gForgedItemCount[ITEM_USES(item)];
 }
 void SetItemForgeCount(int item, int val) {
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount == 0) {
     return;
   }
-  ForgedItemCount[ITEM_USES(item)] = val;
+  gForgedItemCount[ITEM_USES(item)] = val;
 }
 void IncrementForgeCount(int item) {
   int val = GetItemForgeCount(item);

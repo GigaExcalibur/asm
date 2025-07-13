@@ -1,6 +1,13 @@
 
 #include "EAstdlib.event" 
 
+ALIGN 4 
+gForgedItemDurability:
+WORD 0x203E964 // BWL test case lol 
+gForgedItemCount: 
+WORD 0x203E954
+
+
 #define ForgeBonus(mt, hit, crit, wt) "BYTE mt hit crit wt"
 #define ForgeLimit(item, index, max, cost) "PUSH; ORG gForgeLimits + (item * 4); BYTE index max; SHORT cost; POP"
 #define Negative(num) "0x100 - num"
