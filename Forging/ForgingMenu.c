@@ -189,6 +189,7 @@ void CallForgeMenuASMC(struct EventEngineProc *proc) {
   InitSystemTextFont();
   LoadUiFrameGraphics();
   ResetIconGraphics_();
+  LoadIconPalettes(4);
 
   StartMenu(&gForgeMenuDef, proc);
 }
