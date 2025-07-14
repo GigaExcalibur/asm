@@ -1,5 +1,30 @@
 #include "gbafe.h"
 
+extern const int UseForgedItemDurability;
+int GetForgedItemDurability(int id); 
+int InitFreeForgedItemSlot(int item); 
+int IncrementForgeCount(int item); 
+int DecrementForgeCount(int item); 
+int CanItemBeForged(int item); 
+enum { LINES_MAX = 5 };
+
+struct UnitInfoWindowProc {
+    /* 00 */ PROC_HEADER;
+
+    /* 2C */ struct Unit* unit;
+
+    /* 30 */ struct Text name;
+    /* 38 */ struct Text lines[LINES_MAX];
+
+    /* 60 */ u8 x;
+    /* 61 */ u8 y;
+    /* 62 */ u8 xUnitSprite;
+    /* 63 */ u8 xNameText;
+};
+extern struct UnitInfoWindowProc* UnitInfoWindow_DrawBase(struct UnitInfoWindowProc* proc, struct Unit* unit, int x, int y, int width, int lines);
+extern int GetUnitInfoWindowX(struct Unit* unit, int width);
+
+
 struct ForgeBonuses {
 	s8 mtBonus; 	/* 0x00 */
 	s8 hitBonus; 	/* 0x01 */
