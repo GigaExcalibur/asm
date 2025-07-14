@@ -1,9 +1,10 @@
 #include "gbafe.h"
 
+extern const int UseForgedItemDurability;
 int GetForgedItemDurability(int id); 
 int InitFreeForgedItemSlot(int item); 
-void IncrementForgeCount(int item); 
-void DecrementForgeCount(int item); 
+int IncrementForgeCount(int item); 
+int DecrementForgeCount(int item); 
 int CanItemBeForged(int item); 
 enum { LINES_MAX = 5 };
 

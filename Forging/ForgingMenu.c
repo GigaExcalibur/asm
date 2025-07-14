@@ -91,8 +91,8 @@ int ForgeMenuSwitchIn(struct MenuProc *menu, struct MenuItemProc *menuItem) {
     }
     if (forgeSlot >= 0) { // ensure we found a valid forge ID
       forgedItem = GetItemIndex(forgedItem) |
-                   forgeSlot << 8;     // ensure the forge slot is set
-      IncrementForgeCount(forgedItem); // to show preview
+                   forgeSlot << 8; // ensure the forge slot is set
+      forgedItem = IncrementForgeCount(forgedItem); // to show preview
     }
 
     Text_InsertDrawNumberOrBlank(&texts[0], 0x32, TEXT_COLOR_SYSTEM_BLUE,
@@ -178,15 +178,15 @@ u8 ForgeMenuOnSelect(struct MenuProc *menu, struct MenuItemProc *menuItem) {
   if (IsItemForgeable(item)) {
     int forgeSlot = ITEM_USES(item);
     if (!forgeSlot) {
-      forgeSlot = InitFreeForgedItemSlot(item);
+      forgeSlot = InitFreeForgedItemSlot(
+          item); // returns ITEM_USES if no UseForgedItemDurability
     }
     if (forgeSlot >= 0) { // ensure we found a valid forge ID
       item = GetItemIndex(item) | forgeSlot
                                       << 8; // ensure the forge slot is set
-      gActiveUnit->items[menuItem->itemNumber] = item;
 
       gPlaySt.partyGoldAmount -= GetItemForgeCost(item);
-      IncrementForgeCount(item);
+      gActiveUnit->items[menuItem->itemNumber] = IncrementForgeCount(item);
       return MENU_ACT_CLEAR | MENU_ACT_SND6A | MENU_ACT_END |
              MENU_ACT_SKIPCURSOR;
     }

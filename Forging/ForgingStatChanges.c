@@ -22,7 +22,7 @@ extern struct ForgedItemRam *gForgedItemRam; // NumOfForgables entries
 // #define ITEM_FORGE_ID(id) "(id >> 8)& 0x3F"
 
 int GetForgedItemDurability(int item) {
-  if (GetItemAttributes(item) & IA_UNBREAKABLE)
+  if (GetItemAttributes(item) & IA_UNBREAKABLE || !UseForgedItemDurability)
     return 0xFF;
 
   int id = ITEM_USES(item);
@@ -37,6 +37,9 @@ int GetForgedItemDurability(int item) {
 }
 
 void SetForgedItemDurability(int item, u8 value) {
+  if (!UseForgedItemDurability) {
+    return;
+  }
   int id = ITEM_USES(item);
   if (id < 0 || id >= NumOfForgables)
     return;
@@ -45,6 +48,9 @@ void SetForgedItemDurability(int item, u8 value) {
 }
 
 void MakeForgedItemUnbreakable(int item) {
+  if (!UseForgedItemDurability) {
+    return;
+  }
   int id = ITEM_USES(item);
   if (id < 0 || id >= NumOfForgables)
     return;
@@ -68,6 +74,9 @@ void SetForgedItemDefaultUse(int item) {
 }
 
 int InitFreeForgedItemSlot(int item) {
+  if (!UseForgedItemDurability) {
+    return ITEM_USES(item);
+  }
   for (int i = 1; i < NumOfForgables; ++i) {
     if (!GetForgedItemDurability(
             i << 8)) { // if no durability, the item does not exist
@@ -78,35 +87,46 @@ int InitFreeForgedItemSlot(int item) {
   return -1;
 }
 
-int CanItemBeForged(int item) { // can it be forged at all
+int CanItemBeForged(int item) { // for item line drawing
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount == 0) {
+    return false;
+  }
+  if (!UseForgedItemDurability && !ITEM_USES(item)) {
     return false;
   }
   return true;
 }
 
 int GetItemForgeCount(int item) {
+
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount == 0) {
     return 0;
   }
+  if (!UseForgedItemDurability) {
+    return ITEM_USES(item);
+  }
   return gForgedItemRam[ITEM_USES(item)].hit;
 }
-void SetItemForgeCount(int item, int val) {
+int SetItemForgeCount(int item, int val) {
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount == 0) {
-    return;
+    return item;
+  }
+  if (!UseForgedItemDurability) {
+    return GetItemIndex(item) | (val << 8);
   }
   gForgedItemRam[ITEM_USES(item)].hit = val;
+  return item;
 }
-void IncrementForgeCount(int item) {
+int IncrementForgeCount(int item) {
   int val = GetItemForgeCount(item);
-  SetItemForgeCount(item, val + 1);
+  return SetItemForgeCount(item, val + 1);
 }
-void DecrementForgeCount(int item) {
+int DecrementForgeCount(int item) {
   int val = GetItemForgeCount(item);
-  SetItemForgeCount(item, val - 1);
+  return SetItemForgeCount(item, val - 1);
 }
 
 int GetItemForgeCost(int item) {

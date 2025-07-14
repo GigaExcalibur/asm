@@ -1,7 +1,7 @@
 
 #include "EAstdlib.event" 
 
-#define SHRINK_CONVOY_TO_150
+// #define SHRINK_CONVOY_TO_150
 
 ALIGN 4 
 NumOfForgables:
@@ -10,8 +10,12 @@ gForgedItemRam: // need NumOfForgables*2=100 bytes
 //WORD 0x203A81C // Vanilla convoy ram, for use with a custom EMS 
 //that has 200 convoy and also saves 126ish bytes here 
 WORD 0x203B32C // last 50 items of 200 convoy 
-
-
+UseForgedItemDurability:
+#ifdef SHRINK_CONVOY_TO_150
+WORD 1 
+#else 
+WORD 0 
+#endif 
 
 
 
