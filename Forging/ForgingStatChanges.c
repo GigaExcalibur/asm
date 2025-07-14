@@ -1,11 +1,19 @@
 
+#define brk asm("mov r11, r11");
 
-#define NumOfForgables 63 // Same as max item durability, 0 is invalid
-#define BitsPerDurability 6
-#define TotalDurabilityBits (NumOfForgables * BitsPerDurability) // 378
-#define DurabilityStorageBytes ((TotalDurabilityBits + 7) / 8)
-extern u8 *gForgedItemDurability; //[DurabilityStorageBytes]; // 48
-extern u8 *gForgedItemCount;      //[NumOfForgables];
+extern const int NumOfForgables; // Same as max item durability, 0 is invalid
+struct ForgedItemRam {
+  u16 uses : 6;
+  u16 unbreakable : 1; // pay a lot of extra money to make it unbreakable?
+  u16 hit : 3;  // currently forge count, but could be changed to how many times
+                // hit has been forged
+  u16 mt : 3;   // unused: I recommend how many times mt has been forged
+  u16 crit : 3; // also unused: I recommend crit
+  // u8 skill; // idea guying here for Jester
+  // u8 name[7]; // naming forged items would take up a lot of ram and be a pain
+  // to do, good luck Jester
+};
+extern struct ForgedItemRam *gForgedItemRam; // NumOfForgables entries
 
 // in vanilla, GameSavePackedUnit / SuspendSavePackedUnit don't save the 0x80
 // durability bit but if it did, it could be used to determine whether it's
@@ -21,16 +29,11 @@ int GetForgedItemDurability(int item) {
   if (id < 0 || id >= NumOfForgables)
     return 0;
 
-  int bitPos = id * BitsPerDurability;
-  int byteIndex = bitPos / 8;
-  int bitOffset = bitPos % 8;
+  if (gForgedItemRam[id].unbreakable)
+    return 0xFF;
 
-  // Read two bytes to ensure we have enough bits
-  u16 data = gForgedItemDurability[byteIndex];
-  if (byteIndex + 1 < DurabilityStorageBytes)
-    data |= gForgedItemDurability[byteIndex + 1] << 8;
-
-  return (data >> bitOffset) & 0x3F; // Mask to 6 bits
+  // brk;
+  return gForgedItemRam[id].uses;
 }
 
 void SetForgedItemDurability(int item, u8 value) {
@@ -38,28 +41,17 @@ void SetForgedItemDurability(int item, u8 value) {
   if (id < 0 || id >= NumOfForgables)
     return;
 
-  value &= 0x3F; // Only keep 6 bits
-
-  int bitPos = id * BitsPerDurability;
-  int byteIndex = bitPos / 8;
-  int bitOffset = bitPos % 8;
-
-  // Read two bytes
-  u16 data = gForgedItemDurability[byteIndex];
-  if (byteIndex + 1 < DurabilityStorageBytes)
-    data |= gForgedItemDurability[byteIndex + 1] << 8;
-
-  // Clear the 6-bit field
-  data &= ~(0x3F << bitOffset);
-
-  // Set new value
-  data |= value << bitOffset;
-
-  // Write back
-  gForgedItemDurability[byteIndex] = data & 0xFF;
-  if (byteIndex + 1 < DurabilityStorageBytes)
-    gForgedItemDurability[byteIndex + 1] = (data >> 8) & 0xFF;
+  gForgedItemRam[id].uses = value;
 }
+
+void MakeForgedItemUnbreakable(int item) {
+  int id = ITEM_USES(item);
+  if (id < 0 || id >= NumOfForgables)
+    return;
+
+  gForgedItemRam[id].unbreakable = true;
+}
+
 int SetForgedItemAfterUse(int item) {
   int uses = GetForgedItemDurability(item);
   if (!(gBattleStats.config & BATTLE_CONFIG_REAL)) {
@@ -76,11 +68,11 @@ void SetForgedItemDefaultUse(int item) {
 }
 
 int InitFreeForgedItemSlot(int item) {
-  for (int i = 0; i < NumOfForgables; ++i) {
+  for (int i = 1; i < NumOfForgables; ++i) {
     if (!GetForgedItemDurability(
             i << 8)) { // if no durability, the item does not exist
-      SetForgedItemDefaultUse(item | (i + i) << 8);
-      return i + 1; // slot 0 would be 0 durability, so skip
+      SetForgedItemDefaultUse(item | (i << 8));
+      return i; // slot 0 would be 0 durability, so skip
     }
   }
   return -1;
@@ -99,14 +91,14 @@ int GetItemForgeCount(int item) {
   if (limits.maxCount == 0) {
     return 0;
   }
-  return gForgedItemCount[ITEM_USES(item)];
+  return gForgedItemRam[ITEM_USES(item)].hit;
 }
 void SetItemForgeCount(int item, int val) {
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount == 0) {
     return;
   }
-  gForgedItemCount[ITEM_USES(item)] = val;
+  gForgedItemRam[ITEM_USES(item)].hit = val;
 }
 void IncrementForgeCount(int item) {
   int val = GetItemForgeCount(item);
@@ -215,8 +207,10 @@ int MakeNewItem(int item) {
   struct ForgeLimits limits = gForgeLimits[GetItemIndex(item)];
   if (limits.maxCount) {
 
-    InitFreeForgedItemSlot(item);
-    uses = 0;
+    uses = InitFreeForgedItemSlot(item);
+    if (uses < 0) {
+      uses = 0; // need weapon usability routine to make 0 use weps unusable
+    } // this only occurs when you exceed NumOfForgables
   }
 
   return (uses << 8) + GetItemIndex(item);
