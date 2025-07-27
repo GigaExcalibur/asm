@@ -1,0 +1,17 @@
+/* copy into appropriate parts of buildfile
+
+#define Entrap [YOUR ENTRAP ID]
+
+## EntrapSubtitleText
+Select unit to entrap.[X]
+*/
+
+ALIGN 4
+EntrapID_Link:
+WORD Entrap
+
+ALIGN 4
+EntrapSubtitleText_Link:
+WORD EntrapSubtitleText;
+
+#include "Entrap.lyn.event"
