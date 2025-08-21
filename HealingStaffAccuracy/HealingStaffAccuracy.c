@@ -1,11 +1,20 @@
 #include "gbafe.h"
 
+extern u8 StaffHitSkillCoefficient_Link;
+extern u8 StaffHitMaximum_Link;
+extern u8 StaffHitMinimum_Link;
+extern bool StaffHit1RN_Link;
+
 int GetUnitHealingStaffAccuracy(struct Unit* unit, int staff) {
 	int hit = GetItemHit(staff);
-	hit += GetUnitSkill(unit) * 4;
+	hit += GetUnitSkill(unit) * StaffHitSkillCoefficient_Link;
 	
-	if(hit > 99) {
-		hit = 99;
+	if(hit > StaffHitMaximum_Link) {
+		hit = StaffHitMaximum_Link;
+	}
+	
+	if(hit < StaffHitMinimum_Link) {
+		hit = StaffHitMinimum_Link;
 	}
 	
 	return hit;
@@ -26,12 +35,23 @@ void ExecStandardHeal(ProcPtr proc) {
 	
 	int hit = GetUnitHealingStaffAccuracy(GetUnit(gActionData.subjectIndex), GetUnit(gActionData.subjectIndex)->items[gActionData.itemSlotIndex]);
 
-	if(!Roll1RN(hit)) {
-		gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_MISS;
+	if(StaffHit1RN_Link) {
+		if(!Roll1RN(hit)) {
+			gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_MISS;
+		}
+		else {
+			AddUnitHp(GetUnit(gActionData.targetIndex), amount);
+		}
 	}
 	else {
-		AddUnitHp(GetUnit(gActionData.targetIndex), amount);
+		if(!Roll2RN(hit)) {
+			gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_MISS;
+		}
+		else {
+			AddUnitHp(GetUnit(gActionData.targetIndex), amount);
+		}
 	}
+
 
     gBattleHitIterator->hpChange = gBattleTarget.unit.curHP - GetUnitCurrentHp(GetUnit(gActionData.targetIndex));
 

@@ -1,0 +1,23 @@
+#define StaffHitSkillCoefficient 4 // how much healing staff hit each point of Skill provides
+#define StaffHitMaximum	99
+#define StaffHitMinimum	0
+#define StaffHit1RN		True	// if false, healing staff hit uses 2 rn
+
+// don't touch anything below here
+ALIGN 4
+StaffHitSkillCoefficient_Link:
+WORD StaffHitSkillCoefficient
+
+ALIGN 4
+StaffHitMaximum_Link:
+WORD StaffHitMaximum
+
+ALIGN 4
+StaffHitMinimum_Link:
+WORD StaffHitMinimum
+
+ALIGN 4
+StaffHit1RN_Link:
+WORD StaffHit1RN
+
+#include "HealingStaffAccuracy.lyn.event"
