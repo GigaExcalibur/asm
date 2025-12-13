@@ -1,0 +1,45 @@
+#define MenuDefinition(x, y, width, style, options, rtext) "BYTE x y width 0; WORD style; POIN options; WORD 0 0 0 0; rtext"
+#define HasRText "WORD 0x0804F521 0x0804F459"
+#define NoRText "WORD 0 0"
+
+#define MenuOption(name, desc, flag, name_behavior) "WORD flag; SHORT name desc; BYTE 0 0 0 0; POIN ChoiceMenuOptionUsability name_behavior ReturnMenuOptionIndex 0 0 0"
+#define EndMenuOptions "WORD 0 0 0 0 0 0 0 0 0"
+
+#define CallMenu(menu) "SVAL sA menu|IsPointer; ASMC CallChoiceMenuASMC|1"
+
+#define NormalMenuOptionName 0 // alternative: EventSlotMenuOptionName
+
+/* HOW TO USE
+1. Use MenuDefinition(x, y, width, style, options, bpress, rtext) after a label to define your menu's base properties.
+	x - the horizontal position of the menu
+	y - the vertical position of the menu
+	width - the width of the menu
+	style - the visual type of the menu. valid options are 0 and 1.
+	options - the label of the menu's options.
+	rtext - whether the menu has r-text. valid options are HasRText and NoRText.
+	
+2. Use MenuOption(name, desc, flag, name_behavior) after the previous options label to define your menu options.
+	name - the name of the menu option. ignored when the name behavior is not normal.
+	desc - the r-text of the menu option. ignored when the menu has no r-text.
+	flag - the flag that must be on for the option to be selectable. an option with a flag of 0 is always selectable.
+	name_behavior - whether the menu option name is normal or drawn from an event slot. valid options are NormalMenuOptionName and EventSlotMenuOptionName.
+	
+	IMPORTANT: since event slot 0 is always 0, menu option indexes will use event slot (that index + 1) for their name.
+	
+3. CallMenu(menu) to call the menu in an event.
+	menu - the label for the menu definition.
+	
+	IMPORTANT: if menu options names are drawn using EventSlotMenuOptionName, you need to set those event slots before calling the menu.
+*/
+
+ALIGN 4
+ExampleMenu:
+MenuDefinition(6, 8, 18, 0, ExampleMenuOptions, NoRText)
+
+ALIGN 4
+ExampleMenuOptions:
+MenuOption(0xC15, 0xC16, 0, EventSlotMenuOptionName)
+MenuOption(0xC16, 0xC15, 0x11, EventSlotMenuOptionName)
+EndMenuOptions
+
+#include "LordSplitMenuPlusPlus.lyn.event"
