@@ -1,4 +1,4 @@
-#define MenuDefinition(x, y, width, style, options, rtext) "BYTE x y width 0; WORD style; POIN options; WORD 0 0 0 0; rtext"
+#define MenuDefinition(xpos, ypos, width, style, options, rtext) "BYTE xpos ypos width 0; WORD style; POIN options; WORD 0 0 0 0; rtext"
 #define HasRText "WORD 0x0804F521 0x0804F459"
 #define NoRText "WORD 0 0"
 
@@ -10,7 +10,7 @@
 #define NormalMenuOptionName 0 // alternative: EventSlotMenuOptionName
 
 /* HOW TO USE
-1. Use MenuDefinition(x, y, width, style, options, rtext) after a label to define your menu's base properties.
+1. Use MenuDefinition(xpos, ypos, width, style, options, rtext) after a label to define your menu's base properties.
 	x - the horizontal position of the menu
 	y - the vertical position of the menu
 	width - the width of the menu
