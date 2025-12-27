@@ -5,7 +5,7 @@
 #define MenuOption(name, desc, flag, behavior) "WORD flag; SHORT name desc; BYTE 0 0 0 0; POIN ChoiceMenuOptionUsability behavior ReturnMenuOptionIndex 0 0 0"
 #define EndMenuOptions "WORD 0 0 0 0 0 0 0 0 0"
 
-#define CallMenu(menu) "SVAL sA menu|IsPointer; ASMC CallChoiceMenuASMC|1"
+#define CallMenu(menu, subtitle) "SVAL sA menu|IsPointer; SVAL sB subtitle; ASMC CallChoiceMenuASMC|1"
 
 #define NormalMenuOptionName 0 // alternative: EventSlotMenuOptionName
 
@@ -26,8 +26,9 @@
 	
 	IMPORTANT: since event slot 0 is always 0, menu option indexes will use event slot (that index + 1) for their name.
 	
-3. CallMenu(menu) to call the menu in an event.
+3. CallMenu(menu, subtitle) to call the menu in an event.
 	menu - the label for the menu definition.
+	subtitle - the scrolling text beneath the menu. if there's no subtitle, put 0 here.
 	
 	IMPORTANT: if menu options names are drawn using EventSlotMenuOptionName, you need to set those event slots before calling the menu.
 */

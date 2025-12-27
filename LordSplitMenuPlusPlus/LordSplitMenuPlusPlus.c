@@ -11,6 +11,10 @@ void CallChoiceMenuASMC(struct Proc* proc)
 	struct MenuDef* menu = (struct MenuDef*) gEventSlots[0xA];
 	
     StartMenu(menu, proc);
+	
+	if(gEventSlots[0xB] != 0) {
+		StartSubtitleHelp(proc, GetStringFromIndex(gEventSlots[0xB]));
+	}
 }
 
 u8 ChoiceMenuOptionUsability(struct MenuItemDef* def, int number) {
