@@ -7,7 +7,7 @@
 
 #define CallMenu(menu, subtitle) "SVAL sA menu|IsPointer; SVAL sB subtitle; ASMC CallChoiceMenuASMC|1"
 
-#define NormalMenuOptionName 0 // alternative: EventSlotMenuOptionName
+#define NormalMenuOptionName 0 // alternative: EventSlotMenuOptionName, EventSlotMenuOptionNameWithIcon
 
 /* HOW TO USE
 1. Use MenuDefinition(xpos, ypos, width, style, options, rtext) after a label to define your menu's base properties.
@@ -22,9 +22,14 @@
 	name - the name of the menu option. ignored when the name behavior is not normal.
 	desc - the r-text of the menu option. ignored when the menu has no r-text.
 	flag - the flag that must be on for the option to be selectable. an option with a flag of 0 is always selectable.
-	behavior - whether the menu option name is normal or drawn from an event slot. valid options are NormalMenuOptionName and EventSlotMenuOptionName.
+	behavior - special behavior for how menu option names are drawn. valid options:
+		NormalMenuOptionName: menu options are drawn normally from the name parameter.
+		EventSlotMenuOptionName: menu options are drawn from event slots.
+		EventSlotMenuOptionNameWithIcon: menu options are drawn from event slots with icons.
 	
-	IMPORTANT: since event slot 0 is always 0, menu option indexes will use event slot (that index + 1) for their name.
+	IMPORTANT: since event slot 0 is always 0, EventSlotMenuOptionName menu option indexes will use event slot (that index + 1) for their name.
+	
+	IMPORTANT: since event slot 0 is always 0, EventSlotMenuOptionNameWithIcon menu option indexes will use event slot (that index * 2 + 1) for their name and event slot (that index * 2) + 2 for their icon.
 	
 3. CallMenu(menu, subtitle) to call the menu in an event.
 	menu - the label for the menu definition.
@@ -35,12 +40,12 @@
 
 ALIGN 4
 ExampleMenu:
-MenuDefinition(6, 8, 18, 0, ExampleMenuOptions, NoRText)
+MenuDefinition(6, 8, 18, 1, ExampleMenuOptions, NoRText)
 
 ALIGN 4
 ExampleMenuOptions:
-MenuOption(0xC15, 0xC16, 0, EventSlotMenuOptionName)
-MenuOption(0xC16, 0xC15, 0, EventSlotMenuOptionName)
+MenuOption(0xC15, 0xC16, 0, NormalMenuOptionName)
+MenuOption(0xC16, 0xC15, 0, NormalMenuOptionName)
 EndMenuOptions
 
 #include "LordSplitMenuPlusPlus.lyn.event"

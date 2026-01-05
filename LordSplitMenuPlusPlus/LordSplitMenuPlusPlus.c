@@ -37,7 +37,18 @@ u8 EventSlotMenuOptionName(struct MenuProc* menu, struct MenuItemProc* menuItem)
 	PutDrawText(&menuItem->text, TILEMAP_LOCATED(gBG0TilemapBuffer, menuItem->xTile, menuItem->yTile), color, 0, 0, GetStringFromIndex(newName));
 }
 
+u8 EventSlotMenuOptionNameWithIcon(struct MenuProc* menu, struct MenuItemProc* menuItem) {
+	int color = menuItem->availability - 1;
+	
+	u16 newName = gEventSlots[1 + (menuItem->itemNumber * 2)];
+	u8 icon = gEventSlots[2 + (menuItem->itemNumber * 2)];
+	
+	PutDrawText(&menuItem->text, TILEMAP_LOCATED(gBG0TilemapBuffer, menuItem->xTile + 2, menuItem->yTile), color, 0, 0, GetStringFromIndex(newName));
+	DrawIcon(TILEMAP_LOCATED(gBG0TilemapBuffer, menuItem->xTile, menuItem->yTile), icon, 0x4000);
+}
+
 u8 ReturnMenuOptionIndex(struct MenuProc* menu, struct MenuItemProc* menuItem) {
+	EndSubtitleHelp();
 	if(menuItem->availability == MENU_ENABLED) {
 		gEventSlots[0xC] = menuItem->itemNumber;
 		return MENU_ACT_CLEAR | MENU_ACT_SND6A | MENU_ACT_END | MENU_ACT_SKIPCURSOR;
